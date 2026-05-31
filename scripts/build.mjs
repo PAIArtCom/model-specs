@@ -59,6 +59,7 @@ function normalizeModel(modelId, raw, providers) {
     provider,
     platform: resolvePlatform(modelId, provider, providers),
     mode: raw.mode || 'unknown',
+    // Token-based pricing (chat / completion models)
     input_cost_per_token: num(raw.input_cost_per_token),
     output_cost_per_token: num(raw.output_cost_per_token),
     cache_read_input_token_cost: num(raw.cache_read_input_token_cost),
@@ -66,6 +67,12 @@ function normalizeModel(modelId, raw, providers) {
     cache_creation_input_token_cost_above_1hr: num(raw.cache_creation_input_token_cost_above_1hr),
     input_cost_per_audio_token: num(raw.input_cost_per_audio_token),
     output_cost_per_reasoning_token: num(raw.output_cost_per_reasoning_token),
+    // Non-token pricing (TTS → per character, STT → per second, rerank → per query)
+    input_cost_per_character: num(raw.input_cost_per_character),
+    output_cost_per_character: num(raw.output_cost_per_character),
+    input_cost_per_second: num(raw.input_cost_per_second),
+    output_cost_per_second: num(raw.output_cost_per_second),
+    input_cost_per_query: num(raw.input_cost_per_query),
     max_input_tokens: num(raw.max_input_tokens ?? raw.max_tokens),
     max_output_tokens: num(raw.max_output_tokens),
     capabilities,

@@ -1,5 +1,5 @@
 {
-  "version": "2427d4f151c1",
+  "version": "858baf958f91",
   "generated_at": "2026-05-31T15:11:29.222Z",
   "upstream": {
     "source": "litellm",
@@ -430,6 +430,7 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "rerank",
+      "input_cost_per_query": 0.001,
       "max_input_tokens": 32000,
       "max_output_tokens": 32000,
       "capabilities": {},
@@ -1255,6 +1256,7 @@
       "provider": "assemblyai",
       "platform": "assemblyai",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00003333,
       "capabilities": {},
       "source": "litellm"
     },
@@ -1262,6 +1264,7 @@
       "provider": "assemblyai",
       "platform": "assemblyai",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00010278,
       "capabilities": {},
       "source": "litellm"
     },
@@ -1384,6 +1387,7 @@
       "provider": "aws_polly",
       "platform": "aws_polly",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00003,
       "capabilities": {},
       "source": "litellm"
     },
@@ -1391,6 +1395,7 @@
       "provider": "aws_polly",
       "platform": "aws_polly",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -1398,6 +1403,7 @@
       "provider": "aws_polly",
       "platform": "aws_polly",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.000016,
       "capabilities": {},
       "source": "litellm"
     },
@@ -1405,6 +1411,7 @@
       "provider": "aws_polly",
       "platform": "aws_polly",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.000004,
       "capabilities": {},
       "source": "litellm"
     },
@@ -2428,6 +2435,7 @@
       "mode": "audio_speech",
       "input_cost_per_token": 0.0000025,
       "output_cost_per_token": 0.00001,
+      "output_cost_per_second": 0.00025,
       "capabilities": {},
       "source": "litellm"
     },
@@ -3814,6 +3822,7 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0002777778,
       "capabilities": {},
       "source": "litellm"
     },
@@ -3821,6 +3830,7 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.000015,
       "capabilities": {},
       "source": "litellm"
     },
@@ -3828,6 +3838,7 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00003,
       "capabilities": {},
       "source": "litellm"
     },
@@ -3890,6 +3901,7 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.000015,
       "capabilities": {},
       "source": "litellm"
     },
@@ -3897,6 +3909,7 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00003,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4279,6 +4292,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
+      "output_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4774,6 +4789,7 @@
       "provider": "azure_ai",
       "platform": "openai",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -4783,6 +4799,7 @@
       "provider": "azure_ai",
       "platform": "openai",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -4792,6 +4809,7 @@
       "provider": "azure_ai",
       "platform": "openai",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -4801,6 +4819,7 @@
       "provider": "azure_ai",
       "platform": "openai",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 32768,
       "max_output_tokens": 32768,
       "capabilities": {},
@@ -4810,6 +4829,7 @@
       "provider": "azure_ai",
       "platform": "openai",
       "mode": "rerank",
+      "input_cost_per_query": 0.0025,
       "max_input_tokens": 32768,
       "max_output_tokens": 32768,
       "capabilities": {},
@@ -5523,6 +5543,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.001902,
+      "output_cost_per_second": 0.001902,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -5532,6 +5554,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.011,
+      "output_cost_per_second": 0.011,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -5541,6 +5565,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0011416,
+      "output_cost_per_second": 0.0011416,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -5550,6 +5576,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0066027,
+      "output_cost_per_second": 0.0066027,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -5559,6 +5587,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.01475,
+      "output_cost_per_second": 0.01475,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5568,6 +5598,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0455,
+      "output_cost_per_second": 0.0455,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5577,6 +5609,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0455,
+      "output_cost_per_second": 0.0455,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5586,6 +5620,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.008194,
+      "output_cost_per_second": 0.008194,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5595,6 +5631,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.02527,
+      "output_cost_per_second": 0.02527,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5604,6 +5642,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.02527,
+      "output_cost_per_second": 0.02527,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5936,6 +5976,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.01635,
+      "output_cost_per_second": 0.01635,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5945,6 +5987,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0415,
+      "output_cost_per_second": 0.0415,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5954,6 +5998,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0415,
+      "output_cost_per_second": 0.0415,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5963,6 +6009,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.009083,
+      "output_cost_per_second": 0.009083,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5972,6 +6020,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.02305,
+      "output_cost_per_second": 0.02305,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -5981,6 +6031,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.02305,
+      "output_cost_per_second": 0.02305,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -6467,6 +6519,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.011,
+      "output_cost_per_second": 0.011,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -6476,6 +6530,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0175,
+      "output_cost_per_second": 0.0175,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -6485,6 +6541,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0175,
+      "output_cost_per_second": 0.0175,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -6494,6 +6552,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.00611,
+      "output_cost_per_second": 0.00611,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -6503,6 +6563,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.00972,
+      "output_cost_per_second": 0.00972,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -6512,6 +6574,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.00972,
+      "output_cost_per_second": 0.00972,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -7189,6 +7253,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.011,
+      "output_cost_per_second": 0.011,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -7198,6 +7264,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0175,
+      "output_cost_per_second": 0.0175,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -7207,6 +7275,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.0175,
+      "output_cost_per_second": 0.0175,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -7216,6 +7286,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.00611,
+      "output_cost_per_second": 0.00611,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -7225,6 +7297,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.00972,
+      "output_cost_per_second": 0.00972,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -7234,6 +7308,8 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "chat",
+      "input_cost_per_second": 0.00972,
+      "output_cost_per_second": 0.00972,
       "max_input_tokens": 100000,
       "max_output_tokens": 8191,
       "capabilities": {},
@@ -8388,6 +8464,7 @@
       "provider": "bedrock",
       "platform": "bedrock",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 32000,
       "max_output_tokens": 32000,
       "capabilities": {},
@@ -9410,6 +9487,7 @@
       "provider": "dataforseo",
       "platform": "dataforseo",
       "mode": "search",
+      "input_cost_per_query": 0.003,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9444,6 +9522,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9451,6 +9530,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9458,6 +9538,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9465,6 +9546,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9472,6 +9554,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9479,6 +9562,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9486,6 +9570,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9493,6 +9578,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00020833,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9500,6 +9586,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00024167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9507,6 +9594,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00024167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9514,6 +9602,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00024167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9521,6 +9610,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00024167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9528,6 +9618,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00024167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9535,6 +9626,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9542,6 +9634,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9549,6 +9642,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9556,6 +9650,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9563,6 +9658,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9570,6 +9666,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9577,6 +9674,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9584,6 +9682,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9591,6 +9690,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9598,6 +9698,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9605,6 +9706,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9612,6 +9714,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9619,6 +9722,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9626,6 +9730,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9633,6 +9738,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00008667,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9640,6 +9746,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9647,6 +9754,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00007167,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9654,6 +9762,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9661,6 +9770,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9668,6 +9778,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9675,6 +9786,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9682,6 +9794,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -9689,6 +9802,7 @@
       "provider": "deepgram",
       "platform": "deepgram",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -10774,6 +10888,7 @@
       "provider": "elevenlabs",
       "platform": "elevenlabs",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00018,
       "capabilities": {},
       "source": "litellm"
     },
@@ -10781,6 +10896,7 @@
       "provider": "elevenlabs",
       "platform": "elevenlabs",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00018,
       "capabilities": {},
       "source": "litellm"
     },
@@ -10788,6 +10904,7 @@
       "provider": "elevenlabs",
       "platform": "elevenlabs",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0000611,
       "capabilities": {},
       "source": "litellm"
     },
@@ -10795,6 +10912,7 @@
       "provider": "elevenlabs",
       "platform": "elevenlabs",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0000611,
       "capabilities": {},
       "source": "litellm"
     },
@@ -16316,6 +16434,7 @@
       "provider": "gemini",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.35,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -16324,6 +16443,7 @@
       "provider": "gemini",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.15,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -16332,6 +16452,7 @@
       "provider": "gemini",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.15,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -16340,6 +16461,7 @@
       "provider": "gemini",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.4,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -16348,6 +16470,7 @@
       "provider": "gemini",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.4,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -16356,6 +16479,7 @@
       "provider": "gemini",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.05,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -17229,6 +17353,7 @@
       "provider": "google_pse",
       "platform": "google_pse",
       "mode": "search",
+      "input_cost_per_query": 0.005,
       "capabilities": {},
       "source": "litellm"
     },
@@ -17817,6 +17942,7 @@
       "mode": "audio_speech",
       "input_cost_per_token": 0.0000025,
       "output_cost_per_token": 0.00001,
+      "output_cost_per_second": 0.00025,
       "capabilities": {},
       "source": "litellm"
     },
@@ -17826,6 +17952,7 @@
       "mode": "audio_speech",
       "input_cost_per_token": 0.0000025,
       "output_cost_per_token": 0.00001,
+      "output_cost_per_second": 0.00025,
       "capabilities": {},
       "source": "litellm"
     },
@@ -17835,6 +17962,7 @@
       "mode": "audio_speech",
       "input_cost_per_token": 0.0000025,
       "output_cost_per_token": 0.00001,
+      "output_cost_per_second": 0.00025,
       "capabilities": {},
       "source": "litellm"
     },
@@ -19251,6 +19379,7 @@
       "provider": "groq",
       "platform": "groq",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00005,
       "max_input_tokens": 10000,
       "max_output_tokens": 10000,
       "capabilities": {},
@@ -19274,6 +19403,7 @@
       "provider": "groq",
       "platform": "groq",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00003083,
       "capabilities": {},
       "source": "litellm"
     },
@@ -19281,6 +19411,7 @@
       "provider": "groq",
       "platform": "groq",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.00001111,
       "capabilities": {},
       "source": "litellm"
     },
@@ -20174,6 +20305,7 @@
       "provider": "linkup",
       "platform": "linkup",
       "mode": "search",
+      "input_cost_per_query": 0.00587,
       "capabilities": {},
       "source": "litellm"
     },
@@ -20181,6 +20313,7 @@
       "provider": "linkup",
       "platform": "linkup",
       "mode": "search",
+      "input_cost_per_query": 0.05867,
       "capabilities": {},
       "source": "litellm"
     },
@@ -20615,6 +20748,8 @@
       "provider": "vertex_ai-language-models",
       "platform": "gemini",
       "mode": "chat",
+      "input_cost_per_character": 0.000005,
+      "output_cost_per_character": 0.000015,
       "max_input_tokens": 8192,
       "max_output_tokens": 1024,
       "capabilities": {},
@@ -20624,6 +20759,8 @@
       "provider": "vertex_ai-language-models",
       "platform": "gemini",
       "mode": "chat",
+      "input_cost_per_character": 5e-7,
+      "output_cost_per_character": 0.000001,
       "max_input_tokens": 32768,
       "max_output_tokens": 8192,
       "capabilities": {},
@@ -20975,6 +21112,7 @@
       "provider": "minimax",
       "platform": "minimax",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -20982,6 +21120,7 @@
       "provider": "minimax",
       "platform": "minimax",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00006,
       "capabilities": {},
       "source": "litellm"
     },
@@ -20989,6 +21128,7 @@
       "provider": "minimax",
       "platform": "minimax",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -20996,6 +21136,7 @@
       "provider": "minimax",
       "platform": "minimax",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00006,
       "capabilities": {},
       "source": "litellm"
     },
@@ -22241,6 +22382,7 @@
       "platform": "gemini",
       "mode": "embedding",
       "input_cost_per_token": 8e-7,
+      "input_cost_per_character": 2e-7,
       "max_input_tokens": 2048,
       "capabilities": {},
       "source": "litellm"
@@ -22250,6 +22392,7 @@
       "platform": "gemini",
       "mode": "embedding",
       "input_cost_per_token": 8e-7,
+      "input_cost_per_character": 2e-7,
       "max_input_tokens": 2048,
       "capabilities": {},
       "source": "litellm"
@@ -26934,6 +27077,7 @@
       "provider": "parallel_ai",
       "platform": "parallel_ai",
       "mode": "search",
+      "input_cost_per_query": 0.004,
       "capabilities": {},
       "source": "litellm"
     },
@@ -26941,6 +27085,7 @@
       "provider": "parallel_ai",
       "platform": "parallel_ai",
       "mode": "search",
+      "input_cost_per_query": 0.009,
       "capabilities": {},
       "source": "litellm"
     },
@@ -27256,6 +27401,7 @@
       "provider": "perplexity",
       "platform": "perplexity",
       "mode": "search",
+      "input_cost_per_query": 0.005,
       "capabilities": {},
       "source": "litellm"
     },
@@ -28088,6 +28234,7 @@
       "provider": "cohere",
       "platform": "cohere",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -28097,6 +28244,7 @@
       "provider": "cohere",
       "platform": "cohere",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -28106,6 +28254,7 @@
       "provider": "cohere",
       "platform": "cohere",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -28115,6 +28264,7 @@
       "provider": "cohere",
       "platform": "cohere",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -28124,6 +28274,7 @@
       "provider": "cohere",
       "platform": "cohere",
       "mode": "rerank",
+      "input_cost_per_query": 0.002,
       "max_input_tokens": 4096,
       "max_output_tokens": 4096,
       "capabilities": {},
@@ -28133,6 +28284,7 @@
       "provider": "runwayml",
       "platform": "runwayml",
       "mode": "audio_speech",
+      "input_cost_per_character": 3e-7,
       "capabilities": {},
       "source": "litellm"
     },
@@ -28483,6 +28635,7 @@
       "provider": "serper",
       "platform": "serper",
       "mode": "search",
+      "input_cost_per_query": 0.001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -29117,6 +29270,7 @@
       "provider": "tavily",
       "platform": "tavily",
       "mode": "search",
+      "input_cost_per_query": 0.008,
       "capabilities": {},
       "source": "litellm"
     },
@@ -29124,6 +29278,7 @@
       "provider": "tavily",
       "platform": "tavily",
       "mode": "search",
+      "input_cost_per_query": 0.016,
       "capabilities": {},
       "source": "litellm"
     },
@@ -29150,6 +29305,7 @@
       "platform": "gemini",
       "mode": "embedding",
       "input_cost_per_token": 1e-7,
+      "input_cost_per_character": 2.5e-8,
       "max_input_tokens": 2048,
       "capabilities": {},
       "source": "litellm"
@@ -29159,6 +29315,7 @@
       "platform": "gemini",
       "mode": "embedding",
       "input_cost_per_token": 1e-7,
+      "input_cost_per_character": 2.5e-8,
       "max_input_tokens": 2048,
       "capabilities": {},
       "source": "litellm"
@@ -29204,6 +29361,7 @@
       "platform": "gemini",
       "mode": "embedding",
       "input_cost_per_token": 1e-7,
+      "input_cost_per_character": 2.5e-8,
       "max_input_tokens": 8192,
       "capabilities": {},
       "source": "litellm"
@@ -29246,6 +29404,7 @@
       "platform": "gemini",
       "mode": "embedding",
       "input_cost_per_token": 1e-7,
+      "input_cost_per_character": 2.5e-8,
       "max_input_tokens": 2048,
       "capabilities": {},
       "source": "litellm"
@@ -29768,6 +29927,7 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.000015,
       "capabilities": {},
       "source": "litellm"
     },
@@ -29775,6 +29935,7 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.000015,
       "capabilities": {},
       "source": "litellm"
     },
@@ -29782,6 +29943,7 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00003,
       "capabilities": {},
       "source": "litellm"
     },
@@ -29789,6 +29951,7 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00003,
       "capabilities": {},
       "source": "litellm"
     },
@@ -31883,6 +32046,7 @@
       "provider": "vertex_ai",
       "platform": "gemini",
       "mode": "audio_speech",
+      "input_cost_per_character": 0.00003,
       "capabilities": {},
       "source": "litellm"
     },
@@ -33290,6 +33454,7 @@
       "provider": "vertex_ai",
       "platform": "gemini",
       "mode": "vector_store",
+      "input_cost_per_query": 0.0015,
       "capabilities": {},
       "source": "litellm"
     },
@@ -33297,6 +33462,7 @@
       "provider": "vertex_ai-video-models",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.35,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -33305,6 +33471,7 @@
       "provider": "vertex_ai-video-models",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.15,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -33313,6 +33480,7 @@
       "provider": "vertex_ai-video-models",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.4,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -33321,6 +33489,7 @@
       "provider": "vertex_ai-video-models",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.15,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -33329,6 +33498,7 @@
       "provider": "vertex_ai-video-models",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.15,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -33337,6 +33507,7 @@
       "provider": "vertex_ai-video-models",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.4,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -33345,6 +33516,7 @@
       "provider": "vertex_ai-video-models",
       "platform": "gemini",
       "mode": "video_generation",
+      "output_cost_per_second": 0.4,
       "max_input_tokens": 1024,
       "capabilities": {},
       "source": "litellm"
@@ -34212,6 +34384,8 @@
       "provider": "watsonx",
       "platform": "watsonx",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
+      "output_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
@@ -34219,6 +34393,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "audio_transcription",
+      "input_cost_per_second": 0.0001,
+      "output_cost_per_second": 0.0001,
       "capabilities": {},
       "source": "litellm"
     },
