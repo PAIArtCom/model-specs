@@ -19,14 +19,24 @@ const stripDocKeys = (obj) =>
 
 // LiteLLM capability flags -> our normalized capability keys.
 const CAP_MAP = {
+  // Core
   supports_function_calling: 'function_calling',
   supports_vision: 'vision',
   supports_prompt_caching: 'prompt_caching',
   supports_reasoning: 'reasoning',
   supports_response_schema: 'response_schema',
+  supports_web_search: 'web_search',
+  // Audio
   supports_audio_input: 'audio_input',
   supports_audio_output: 'audio_output',
-  supports_web_search: 'web_search',
+  // Extended
+  supports_tool_choice: 'tool_choice',
+  supports_system_messages: 'system_messages',
+  supports_parallel_function_calling: 'parallel_function_calling',
+  supports_pdf_input: 'pdf_input',
+  supports_computer_use: 'computer_use',
+  supports_native_structured_output: 'native_structured_output',
+  supports_video_input: 'video_input',
 };
 
 function resolvePlatform(modelId, provider, providers) {
@@ -73,6 +83,21 @@ function normalizeModel(modelId, raw, providers) {
     input_cost_per_second: num(raw.input_cost_per_second),
     output_cost_per_second: num(raw.output_cost_per_second),
     input_cost_per_query: num(raw.input_cost_per_query),
+    // Extended token pricing (batch, priority, flex tiers)
+    output_cost_per_audio_token: num(raw.output_cost_per_audio_token),
+    input_cost_per_token_batches: num(raw.input_cost_per_token_batches),
+    output_cost_per_token_batches: num(raw.output_cost_per_token_batches),
+    input_cost_per_token_priority: num(raw.input_cost_per_token_priority),
+    output_cost_per_token_priority: num(raw.output_cost_per_token_priority),
+    input_cost_per_token_flex: num(raw.input_cost_per_token_flex),
+    output_cost_per_token_flex: num(raw.output_cost_per_token_flex),
+    // Image pricing
+    input_cost_per_image: num(raw.input_cost_per_image),
+    output_cost_per_image: num(raw.output_cost_per_image),
+    // Model metadata
+    output_vector_size: num(raw.output_vector_size),
+    deprecation_date: (typeof raw.deprecation_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.deprecation_date))
+      ? raw.deprecation_date : undefined,
     max_input_tokens: num(raw.max_input_tokens ?? raw.max_tokens),
     max_output_tokens: num(raw.max_output_tokens),
     capabilities,
