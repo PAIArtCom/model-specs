@@ -7,5 +7,41 @@
     "max_input_tokens": 128000,
     "max_output_tokens": 16384,
     "_note": "why this correction exists + source link"
+  },
+
+  "claude-sonnet-4-5": {
+    "cache_creation_input_token_cost_above_1hr": 6e-6,
+    "_note": "LiteLLM missing extended-cache write cost (>1 hr TTL). Anthropic pricing page lists Sonnet 1h cache writes at $6/M — 2× base input, matching the Opus/Haiku pattern. Source: https://www.anthropic.com/pricing (2026-05-31)"
+  },
+
+  "claude-sonnet-4-6": {
+    "cache_creation_input_token_cost_above_1hr": 6e-6,
+    "_note": "Same gap as claude-sonnet-4-5. Sonnet 4.6 ships identical rates per Anthropic's May 2026 pricing page. Source: https://www.anthropic.com/pricing (2026-05-31)"
+  },
+
+  "gemini-2.5-pro": {
+    "input_cost_per_audio_token": 3e-6,
+    "_note": "LiteLLM missing audio input cost for 2.5-pro (2.5-flash and 2.5-flash-lite both have it). Google pricing page lists 2.5-pro audio input at $3/M. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-05-31)"
+  },
+
+  "gemini-3.1-pro": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "chat",
+    "input_cost_per_token": 0.000002,
+    "output_cost_per_token": 0.000012,
+    "cache_read_input_token_cost": 0.0000002,
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 65536,
+    "_note": "Standard tier pricing (prompt ≤ 200K tokens). Source: https://ai.google.dev/gemini-api/docs/pricing (2026-05-31)"
+  },
+
+  "gpt-oss-120b": {
+    "provider": "openai",
+    "platform": "openai",
+    "mode": "chat",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 131072,
+    "_note": "Open-weight model (Apache 2.0). No official API pricing — not served via OpenAI API, deployed via self-hosting or third parties. Source: https://platform.openai.com/docs/models/gpt-oss-120b (2026-05-31)"
   }
 }

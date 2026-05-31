@@ -5,5 +5,20 @@
     "function_calling": true,
     "vision": true,
     "_note": "why this correction exists + source link"
+  },
+
+  "gemini-3.1-pro": {
+    "function_calling": true,
+    "vision": true,
+    "prompt_caching": true,
+    "response_schema": true,
+    "web_search": true,
+    "_note": "Source: https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview (2026-05-31)"
+  },
+
+  "gpt-oss-120b": {
+    "function_calling": true,
+    "response_schema": true,
+    "_note": "Text-only (no vision). Source: https://developers.openai.com/api/docs/models/gpt-oss-120b (2026-05-31)"
   }
 }

@@ -54,7 +54,7 @@ function normalizeModel(modelId, raw, providers) {
   for (const [litellmKey, ourKey] of Object.entries(CAP_MAP)) {
     if (raw[litellmKey] === true) capabilities[ourKey] = true;
   }
-  const num = (v) => (typeof v === 'number' ? v : undefined);
+  const num = (v) => (typeof v === 'number' && v > 0 ? v : undefined);
   const model = {
     provider,
     platform: resolvePlatform(modelId, provider, providers),
@@ -63,6 +63,9 @@ function normalizeModel(modelId, raw, providers) {
     output_cost_per_token: num(raw.output_cost_per_token),
     cache_read_input_token_cost: num(raw.cache_read_input_token_cost),
     cache_creation_input_token_cost: num(raw.cache_creation_input_token_cost),
+    cache_creation_input_token_cost_above_1hr: num(raw.cache_creation_input_token_cost_above_1hr),
+    input_cost_per_audio_token: num(raw.input_cost_per_audio_token),
+    output_cost_per_reasoning_token: num(raw.output_cost_per_reasoning_token),
     max_input_tokens: num(raw.max_input_tokens ?? raw.max_tokens),
     max_output_tokens: num(raw.max_output_tokens),
     capabilities,
@@ -102,7 +105,7 @@ async function main() {
 
   // Clients.
   const clients = {};
-  for (const name of ['claude-code', 'codex', 'gemini-cli']) {
+  for (const name of ['claude-code', 'codex', 'antigravity']) {
     const c = await readJson(`clients/${name}.json`);
     clients[c.client] = {
       description: c.description,
@@ -128,7 +131,7 @@ async function main() {
 
   const catalog = {
     version,
-    generated_at: new Date().toISOString(),
+    generated_at: prov.fetched_at || 'unknown',
     upstream: { source: 'litellm', sha: prov.commit || 'unknown', fetched_at: prov.fetched_at || 'unknown' },
     ...payload,
   };

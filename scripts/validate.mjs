@@ -1,91 +1,105 @@
 #!/usr/bin/env node
-// Validate dist/catalog.json against schema/catalog.schema.json (structural) and
-// a set of invariants that a JSON Schema can't easily express. Exits non-zero on
-// any violation so CI blocks bad data from being published.
-//
-// Zero-dependency: a small structural check plus explicit invariants. (If you
-// later want full JSON Schema, swap the structural pass for ajv.)
+// Validate dist/catalog.json against schema/catalog.schema.json (structural + bounds),
+// then apply semantic invariants that JSON Schema can't easily express.
+// Exits non-zero on any violation so CI blocks bad data from being published.
 
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const p = (...x) => resolve(ROOT, ...x);
 const readJson = async (rel) => JSON.parse(await readFile(p(rel), 'utf8'));
 
 const errors = [];
+const warnings = [];
 const fail = (msg) => errors.push(msg);
+const warn = (msg) => warnings.push(msg);
 
-function checkTopLevel(cat) {
-  for (const key of ['version', 'generated_at', 'upstream', 'models', 'clients']) {
-    if (!(key in cat)) fail(`missing top-level key: ${key}`);
+function checkSemanticInvariants(catalog) {
+  const { models = {}, clients = {} } = catalog;
+
+  // Schema enforces minProperties:1 on models, but we emit a clearer message
+  // since an empty upstream/ sync is a deployment-breaking failure.
+  if (Object.keys(models).length === 0) {
+    fail('catalog has zero models — upstream sync likely failed');
   }
-  if (cat.models && typeof cat.models !== 'object') fail('models must be an object');
-  if (cat.clients && typeof cat.clients !== 'object') fail('clients must be an object');
-}
 
-function checkModels(models) {
-  const VALID_SOURCE = new Set(['litellm', 'patch']);
-  let count = 0;
+  // Schema enforces maximum:1 on cost fields, but the bare "must be <= 1" message
+  // is cryptic. Re-flag with the actionable unit-error diagnosis.
   for (const [id, m] of Object.entries(models)) {
-    count++;
-    if (!m.provider) fail(`${id}: empty provider`);
-    if (!m.platform) fail(`${id}: empty platform`);
-    if (!VALID_SOURCE.has(m.source)) fail(`${id}: invalid source "${m.source}"`);
     for (const costKey of [
       'input_cost_per_token',
       'output_cost_per_token',
       'cache_read_input_token_cost',
       'cache_creation_input_token_cost',
+      'cache_creation_input_token_cost_above_1hr',
+      'input_cost_per_audio_token',
+      'output_cost_per_reasoning_token',
     ]) {
-      if (costKey in m) {
-        if (typeof m[costKey] !== 'number') fail(`${id}: ${costKey} must be a number`);
-        else if (m[costKey] < 0) fail(`${id}: ${costKey} is negative (${m[costKey]})`);
-        else if (m[costKey] > 1) fail(`${id}: ${costKey}=${m[costKey]} > 1 USD/token — likely a per-million vs per-token unit error`);
+      if (typeof m[costKey] === 'number' && m[costKey] > 1) {
+        fail(`${id}: ${costKey}=${m[costKey]} > 1 USD/token — likely a per-million vs per-token unit error`);
       }
     }
-    for (const tokKey of ['max_input_tokens', 'max_output_tokens']) {
-      if (tokKey in m && (!Number.isInteger(m[tokKey]) || m[tokKey] <= 0)) {
-        fail(`${id}: ${tokKey} must be a positive integer (got ${m[tokKey]})`);
-      }
-    }
-    if (m.capabilities && typeof m.capabilities !== 'object') fail(`${id}: capabilities must be an object`);
   }
-  if (count === 0) fail('catalog has zero models — upstream sync likely failed');
-  return count;
-}
 
-function checkClients(clients) {
-  for (const [name, c] of Object.entries(clients)) {
-    if (!Array.isArray(c.models)) fail(`client ${name}: models must be an array`);
-    else {
-      if (c.models.length === 0) fail(`client ${name}: empty models list`);
-      const dupes = c.models.filter((v, i) => c.models.indexOf(v) !== i);
-      if (dupes.length) fail(`client ${name}: duplicate models ${[...new Set(dupes)].join(', ')}`);
+  // Warn when a client references a model id not in the catalog. clients/ is
+  // intentionally allowed to list ids LiteLLM doesn't track yet, so this is a
+  // signal rather than a hard error — it prompts a pricing-patch or upstream update.
+  for (const [clientName, c] of Object.entries(clients)) {
+    for (const modelId of c.models ?? []) {
+      if (!models[modelId]) {
+        warn(`client ${clientName}: model "${modelId}" has no catalog entry (no pricing/context data)`);
+      }
     }
   }
 }
 
 async function main() {
-  let catalog;
+  let catalog, schema;
   try {
     catalog = await readJson('dist/catalog.json');
   } catch (err) {
     console.error(`validate: cannot read dist/catalog.json — run "npm run build" first (${err.message})`);
     process.exit(1);
   }
+  try {
+    schema = await readJson('schema/catalog.schema.json');
+  } catch (err) {
+    console.error(`validate: cannot read schema/catalog.schema.json (${err.message})`);
+    process.exit(1);
+  }
 
-  checkTopLevel(catalog);
-  const modelCount = catalog.models ? checkModels(catalog.models) : 0;
-  if (catalog.clients) checkClients(catalog.clients);
+  // Schema validation: structural correctness, required fields, type constraints,
+  // cost bounds (0 ≤ cost ≤ 1), token limits (positive integers), unique client models.
+  const ajv = new Ajv({ allErrors: true });
+  addFormats(ajv);
+  const valid = ajv.validate(schema, catalog);
+  if (!valid) {
+    for (const err of ajv.errors) {
+      fail(`schema: ${err.instancePath || '(root)'} ${err.message}`);
+    }
+  }
+
+  // Semantic invariants beyond what JSON Schema expresses.
+  checkSemanticInvariants(catalog);
+
+  if (warnings.length) {
+    for (const w of warnings) console.warn(`  warn: ${w}`);
+  }
 
   if (errors.length) {
     console.error(`validate: FAILED with ${errors.length} error(s):`);
     for (const e of errors) console.error(`  - ${e}`);
     process.exit(1);
   }
-  console.log(`validate: OK — ${modelCount} models, ${Object.keys(catalog.clients || {}).length} clients, version ${catalog.version}`);
+
+  const modelCount = Object.keys(catalog.models || {}).length;
+  const clientCount = Object.keys(catalog.clients || {}).length;
+  const warnSuffix = warnings.length ? `, ${warnings.length} warning(s)` : '';
+  console.log(`validate: OK — ${modelCount} models, ${clientCount} clients, version ${catalog.version}${warnSuffix}`);
 }
 
 main().catch((err) => {

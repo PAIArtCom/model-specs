@@ -1,12 +1,13 @@
 {
   "client": "codex",
-  "description": "Model ids accepted by OpenAI's Codex CLI (the --model flag / config). Maintained by observation of the CLI and its /backend-api/codex/models surface.",
+  "description": "Model ids accepted by OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is a separate endpoint from the general OpenAI API — pro/nano/other API-only variants are not accessible here. Source: codex-rs/models-manager/models.json in the openai/codex repo.",
   "homepage": "https://github.com/openai/codex",
   "updated": "2026-05-31",
   "models": [
-    "gpt-5.5-codex",
-    "gpt-5.4-codex",
-    "gpt-5.5",
-    "gpt-5.4"
+    "gpt-5.2",
+    "gpt-5.3-codex",
+    "gpt-5.4",
+    "gpt-5.4-mini",
+    "gpt-5.5"
   ]
 }

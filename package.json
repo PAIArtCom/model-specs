@@ -5,7 +5,9 @@
   "type": "module",
   "private": false,
   "license": "MIT",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "sync": "node scripts/sync.mjs",
     "build": "node scripts/build.mjs",
@@ -22,5 +24,9 @@
     "litellm",
     "catalog",
     "ai-models"
-  ]
+  ],
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  }
 }

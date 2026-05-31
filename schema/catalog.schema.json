@@ -19,6 +19,7 @@
     },
     "models": {
       "type": "object",
+      "minProperties": 1,
       "additionalProperties": {
         "type": "object",
         "required": ["provider", "platform", "mode", "source"],
@@ -30,6 +31,9 @@
           "output_cost_per_token": { "type": "number", "minimum": 0, "maximum": 1 },
           "cache_read_input_token_cost": { "type": "number", "minimum": 0, "maximum": 1 },
           "cache_creation_input_token_cost": { "type": "number", "minimum": 0, "maximum": 1 },
+          "cache_creation_input_token_cost_above_1hr": { "type": "number", "minimum": 0, "maximum": 1 },
+          "input_cost_per_audio_token": { "type": "number", "minimum": 0, "maximum": 1 },
+          "output_cost_per_reasoning_token": { "type": "number", "minimum": 0, "maximum": 1 },
           "max_input_tokens": { "type": "integer", "exclusiveMinimum": 0 },
           "max_output_tokens": { "type": "integer", "exclusiveMinimum": 0 },
           "capabilities": {
