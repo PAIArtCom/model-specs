@@ -18,7 +18,15 @@ const warnings = [];
 const fail = (msg) => errors.push(msg);
 const warn = (msg) => warnings.push(msg);
 
-function checkSemanticInvariants(catalog) {
+// Derive cost field names from the schema so this list never drifts from the
+// schema definition — adding a field to schema/catalog.schema.json automatically
+// includes it in the unit-error check below.
+function costFieldsFromSchema(schema) {
+  const modelProps = schema?.properties?.models?.additionalProperties?.properties ?? {};
+  return Object.keys(modelProps).filter((k) => k.includes('cost'));
+}
+
+function checkSemanticInvariants(catalog, schema) {
   const { models = {}, clients = {} } = catalog;
 
   // Schema enforces minProperties:1 on models, but we emit a clearer message
@@ -29,16 +37,9 @@ function checkSemanticInvariants(catalog) {
 
   // Schema enforces maximum:1 on cost fields, but the bare "must be <= 1" message
   // is cryptic. Re-flag with the actionable unit-error diagnosis.
+  const costKeys = costFieldsFromSchema(schema);
   for (const [id, m] of Object.entries(models)) {
-    for (const costKey of [
-      'input_cost_per_token',
-      'output_cost_per_token',
-      'cache_read_input_token_cost',
-      'cache_creation_input_token_cost',
-      'cache_creation_input_token_cost_above_1hr',
-      'input_cost_per_audio_token',
-      'output_cost_per_reasoning_token',
-    ]) {
+    for (const costKey of costKeys) {
       if (typeof m[costKey] === 'number' && m[costKey] > 1) {
         fail(`${id}: ${costKey}=${m[costKey]} > 1 USD/token — likely a per-million vs per-token unit error`);
       }
@@ -84,7 +85,7 @@ async function main() {
   }
 
   // Semantic invariants beyond what JSON Schema expresses.
-  checkSemanticInvariants(catalog);
+  checkSemanticInvariants(catalog, schema);
 
   if (warnings.length) {
     for (const w of warnings) console.warn(`  warn: ${w}`);
