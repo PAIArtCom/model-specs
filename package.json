@@ -1,0 +1,26 @@
+{
+  "name": "model-specs",
+  "version": "0.1.0",
+  "description": "Community catalog of LLM model specs (pricing, context, capabilities) auto-synced from LiteLLM, plus corrections and AI-CLI compatibility lists.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "sync": "node scripts/sync.mjs",
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "all": "npm run sync && npm run build && npm run validate"
+  },
+  "keywords": [
+    "llm",
+    "model",
+    "specs",
+    "pricing",
+    "context-window",
+    "capabilities",
+    "litellm",
+    "catalog",
+    "ai-models"
+  ]
+}

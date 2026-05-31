@@ -1,0 +1,11 @@
+{
+  "_doc": "Objective corrections/additions to per-token costs and context limits. Keyed by model id. Each entry is shallow-merged over the upstream record, and flips that model's `source` to `patch`. Use ONLY for objective base costs published by the vendor — never selling-price markup. Costs are USD per token (floats), matching LiteLLM.",
+
+  "_example_remove_underscore_to_use": {
+    "input_cost_per_token": 0.0000025,
+    "output_cost_per_token": 0.00001,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 16384,
+    "_note": "why this correction exists + source link"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_doc": "Objective corrections to capability flags when LiteLLM is wrong or missing. Keyed by model id; shallow-merged into that model's `capabilities` object and flips `source` to `patch`. Recognized flags: function_calling, vision, prompt_caching, reasoning, response_schema, audio_input, audio_output, web_search.",
+
+  "_example_remove_underscore_to_use": {
+    "function_calling": true,
+    "vision": true,
+    "_note": "why this correction exists + source link"
+  }
+}

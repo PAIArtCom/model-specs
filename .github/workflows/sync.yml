@@ -1,0 +1,43 @@
+name: sync-upstream
+
+# Weekly pull of LiteLLM's model database. Opens a PR rather than committing to
+# main directly — pricing changes are revenue-affecting and deserve a human glance
+# at the diff before merge.
+on:
+  schedule:
+    - cron: '17 6 * * 1' # Mondays 06:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Sync upstream + rebuild + validate
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm run sync
+          npm run build
+          npm run validate
+      - name: Open PR if changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/sync-litellm
+          title: 'chore: sync LiteLLM model specs'
+          commit-message: 'chore: sync LiteLLM model specs'
+          body: |
+            Automated weekly sync of `upstream/litellm/` + rebuilt `dist/`.
+            Review the pricing/spec diff before merging.
+          add-paths: |
+            upstream/litellm/prices.json
+            upstream/litellm/SOURCE_SHA
+            dist/catalog.json
+            dist/catalog.sha

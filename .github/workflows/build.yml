@@ -1,0 +1,30 @@
+name: build-validate
+
+# On every push/PR: rebuild dist/ from sources and fail if the committed dist/ is
+# stale or if validation fails. This keeps dist/catalog.json an honest function of
+# the inputs and blocks bad data from landing.
+on:
+  push:
+    branches: [main]
+  pull_request: {}
+  workflow_dispatch: {}
+
+jobs:
+  build-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build
+        run: npm run build
+      - name: Validate
+        run: npm run validate
+      - name: Ensure dist/ is committed and up to date
+        run: |
+          if ! git diff --quiet -- dist/; then
+            echo "::error::dist/ is out of date. Run 'npm run build' and commit the result."
+            git --no-pager diff --stat -- dist/
+            exit 1
+          fi

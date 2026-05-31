@@ -1,0 +1,32 @@
+{
+  "_doc": "Maps LiteLLM's fine-grained `litellm_provider` to a normalized `platform`. The build applies `byProvider` first (exact provider match), then `byProviderPrefix` (longest-prefix match) for families like vertex_ai_anthropic. A model's own `byModelPrefix` override wins over both. This is where corrections like the vertex_ai multi-vendor split live.",
+
+  "byProvider": {
+    "openai": "openai",
+    "azure": "openai",
+    "azure_ai": "openai",
+    "text-completion-openai": "openai",
+    "anthropic": "anthropic",
+    "gemini": "gemini",
+    "vertex_ai": "gemini",
+    "vertex_ai-language-models": "gemini",
+    "cohere": "cohere",
+    "cohere_chat": "cohere",
+    "jina_ai": "jina"
+  },
+
+  "byProviderPrefix": {
+    "_doc": "vertex_ai is multi-vendor in LiteLLM: vertex_ai-anthropic_models serves Claude, vertex_ai-mistral_models serves Mistral, etc. Splitting by prefix prevents the #59 bug where everything vertex_ai* collapsed to gemini.",
+    "vertex_ai-anthropic": "anthropic",
+    "vertex_ai-mistral": "mistral",
+    "vertex_ai-ai21": "ai21",
+    "vertex_ai-llama": "meta",
+    "vertex_ai-": "gemini"
+  },
+
+  "byModelPrefix": {
+    "_doc": "Final override keyed on the model id itself, for cases where provider alone is ambiguous.",
+    "claude-": "anthropic",
+    "gemini-": "gemini"
+  }
+}

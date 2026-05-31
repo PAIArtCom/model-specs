@@ -1,0 +1,12 @@
+{
+  "client": "codex",
+  "description": "Model ids accepted by OpenAI's Codex CLI (the --model flag / config). Maintained by observation of the CLI and its /backend-api/codex/models surface.",
+  "homepage": "https://github.com/openai/codex",
+  "updated": "2026-05-31",
+  "models": [
+    "gpt-5.5-codex",
+    "gpt-5.4-codex",
+    "gpt-5.5",
+    "gpt-5.4"
+  ]
+}

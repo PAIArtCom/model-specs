@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/model-specs/model-specs/schema/catalog.schema.json",
+  "title": "model-specs catalog",
+  "type": "object",
+  "required": ["version", "generated_at", "upstream", "models", "clients"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string", "description": "sha256[:12] of the models+clients payload" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "upstream": {
+      "type": "object",
+      "required": ["source", "sha", "fetched_at"],
+      "properties": {
+        "source": { "type": "string" },
+        "sha": { "type": "string" },
+        "fetched_at": { "type": "string" }
+      }
+    },
+    "models": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["provider", "platform", "mode", "source"],
+        "properties": {
+          "provider": { "type": "string", "minLength": 1 },
+          "platform": { "type": "string", "minLength": 1 },
+          "mode": { "type": "string" },
+          "input_cost_per_token": { "type": "number", "minimum": 0, "maximum": 1 },
+          "output_cost_per_token": { "type": "number", "minimum": 0, "maximum": 1 },
+          "cache_read_input_token_cost": { "type": "number", "minimum": 0, "maximum": 1 },
+          "cache_creation_input_token_cost": { "type": "number", "minimum": 0, "maximum": 1 },
+          "max_input_tokens": { "type": "integer", "exclusiveMinimum": 0 },
+          "max_output_tokens": { "type": "integer", "exclusiveMinimum": 0 },
+          "capabilities": {
+            "type": "object",
+            "additionalProperties": { "type": "boolean" }
+          },
+          "source": { "type": "string", "enum": ["litellm", "patch"] }
+        }
+      }
+    },
+    "clients": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["models"],
+        "properties": {
+          "description": { "type": "string" },
+          "homepage": { "type": "string" },
+          "updated": { "type": "string" },
+          "models": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  }
+}

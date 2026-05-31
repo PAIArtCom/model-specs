@@ -1,0 +1,10 @@
+{
+  "client": "gemini-cli",
+  "description": "Model ids accepted by Google's Gemini CLI (the --model flag / config). Maintained by observation of the CLI.",
+  "homepage": "https://github.com/google-gemini/gemini-cli",
+  "updated": "2026-05-31",
+  "models": [
+    "gemini-2.5-pro",
+    "gemini-2.5-flash"
+  ]
+}
