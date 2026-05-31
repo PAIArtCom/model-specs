@@ -64,53 +64,56 @@ function normalizeModel(modelId, raw, providers) {
   for (const [litellmKey, ourKey] of Object.entries(CAP_MAP)) {
     if (raw[litellmKey] === true) capabilities[ourKey] = true;
   }
-  const num = (v) => (typeof v === 'number' && v > 0 ? v : undefined);
+  // numCost: preserves 0 (explicitly free/local models) — use for all pricing fields.
+  // numPositive: requires > 0 — use for limits and sizes where 0 is meaningless.
+  const numCost = (v) => (typeof v === 'number' && v >= 0 ? v : undefined);
+  const numPositive = (v) => (typeof v === 'number' && v > 0 ? v : undefined);
   const model = {
     provider,
     platform: resolvePlatform(modelId, provider, providers),
     mode: raw.mode || 'unknown',
     // Token-based pricing (chat / completion models)
-    input_cost_per_token: num(raw.input_cost_per_token),
-    output_cost_per_token: num(raw.output_cost_per_token),
-    cache_read_input_token_cost: num(raw.cache_read_input_token_cost),
-    cache_creation_input_token_cost: num(raw.cache_creation_input_token_cost),
-    cache_creation_input_token_cost_above_1hr: num(raw.cache_creation_input_token_cost_above_1hr),
-    input_cost_per_audio_token: num(raw.input_cost_per_audio_token),
-    output_cost_per_reasoning_token: num(raw.output_cost_per_reasoning_token),
+    input_cost_per_token: numCost(raw.input_cost_per_token),
+    output_cost_per_token: numCost(raw.output_cost_per_token),
+    cache_read_input_token_cost: numCost(raw.cache_read_input_token_cost),
+    cache_creation_input_token_cost: numCost(raw.cache_creation_input_token_cost),
+    cache_creation_input_token_cost_above_1hr: numCost(raw.cache_creation_input_token_cost_above_1hr),
+    input_cost_per_audio_token: numCost(raw.input_cost_per_audio_token),
+    output_cost_per_reasoning_token: numCost(raw.output_cost_per_reasoning_token),
     // Non-token pricing (TTS → per character, STT → per second, rerank → per query)
-    input_cost_per_character: num(raw.input_cost_per_character),
-    output_cost_per_character: num(raw.output_cost_per_character),
-    input_cost_per_second: num(raw.input_cost_per_second),
-    output_cost_per_second: num(raw.output_cost_per_second),
-    input_cost_per_query: num(raw.input_cost_per_query),
+    input_cost_per_character: numCost(raw.input_cost_per_character),
+    output_cost_per_character: numCost(raw.output_cost_per_character),
+    input_cost_per_second: numCost(raw.input_cost_per_second),
+    output_cost_per_second: numCost(raw.output_cost_per_second),
+    input_cost_per_query: numCost(raw.input_cost_per_query),
     // Extended token pricing (batch, priority, flex tiers)
-    output_cost_per_audio_token: num(raw.output_cost_per_audio_token),
-    input_cost_per_token_batches: num(raw.input_cost_per_token_batches),
-    output_cost_per_token_batches: num(raw.output_cost_per_token_batches),
-    input_cost_per_token_priority: num(raw.input_cost_per_token_priority),
-    output_cost_per_token_priority: num(raw.output_cost_per_token_priority),
-    input_cost_per_token_flex: num(raw.input_cost_per_token_flex),
-    output_cost_per_token_flex: num(raw.output_cost_per_token_flex),
+    output_cost_per_audio_token: numCost(raw.output_cost_per_audio_token),
+    input_cost_per_token_batches: numCost(raw.input_cost_per_token_batches),
+    output_cost_per_token_batches: numCost(raw.output_cost_per_token_batches),
+    input_cost_per_token_priority: numCost(raw.input_cost_per_token_priority),
+    output_cost_per_token_priority: numCost(raw.output_cost_per_token_priority),
+    input_cost_per_token_flex: numCost(raw.input_cost_per_token_flex),
+    output_cost_per_token_flex: numCost(raw.output_cost_per_token_flex),
     // Image pricing
-    input_cost_per_image: num(raw.input_cost_per_image),
-    output_cost_per_image: num(raw.output_cost_per_image),
+    input_cost_per_image: numCost(raw.input_cost_per_image),
+    output_cost_per_image: numCost(raw.output_cost_per_image),
     // Context-tier pricing (long-context surcharges)
-    input_cost_per_token_above_200k_tokens: num(raw.input_cost_per_token_above_200k_tokens),
-    output_cost_per_token_above_200k_tokens: num(raw.output_cost_per_token_above_200k_tokens),
-    cache_read_input_token_cost_above_200k_tokens: num(raw.cache_read_input_token_cost_above_200k_tokens),
-    cache_creation_input_token_cost_above_200k_tokens: num(raw.cache_creation_input_token_cost_above_200k_tokens),
-    input_cost_per_token_above_272k_tokens: num(raw.input_cost_per_token_above_272k_tokens),
-    output_cost_per_token_above_272k_tokens: num(raw.output_cost_per_token_above_272k_tokens),
-    cache_read_input_token_cost_above_272k_tokens: num(raw.cache_read_input_token_cost_above_272k_tokens),
+    input_cost_per_token_above_200k_tokens: numCost(raw.input_cost_per_token_above_200k_tokens),
+    output_cost_per_token_above_200k_tokens: numCost(raw.output_cost_per_token_above_200k_tokens),
+    cache_read_input_token_cost_above_200k_tokens: numCost(raw.cache_read_input_token_cost_above_200k_tokens),
+    cache_creation_input_token_cost_above_200k_tokens: numCost(raw.cache_creation_input_token_cost_above_200k_tokens),
+    input_cost_per_token_above_272k_tokens: numCost(raw.input_cost_per_token_above_272k_tokens),
+    output_cost_per_token_above_272k_tokens: numCost(raw.output_cost_per_token_above_272k_tokens),
+    cache_read_input_token_cost_above_272k_tokens: numCost(raw.cache_read_input_token_cost_above_272k_tokens),
     // Rate limits
     rpm: (Number.isInteger(raw.rpm) && raw.rpm > 0) ? raw.rpm : undefined,
     tpm: (Number.isInteger(raw.tpm) && raw.tpm > 0) ? raw.tpm : undefined,
     // Model metadata
-    output_vector_size: num(raw.output_vector_size),
+    output_vector_size: numPositive(raw.output_vector_size),
     deprecation_date: (typeof raw.deprecation_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.deprecation_date))
       ? raw.deprecation_date : undefined,
-    max_input_tokens: num(raw.max_input_tokens ?? raw.max_tokens),
-    max_output_tokens: num(raw.max_output_tokens),
+    max_input_tokens: numPositive(raw.max_input_tokens ?? raw.max_tokens),
+    max_output_tokens: numPositive(raw.max_output_tokens),
     capabilities,
     source: 'litellm',
   };
@@ -126,6 +129,7 @@ async function main() {
 
   const models = {};
   for (const [modelId, raw] of Object.entries(upstream)) {
+    if (modelId === 'sample_spec') continue; // LiteLLM documentation placeholder, not a real model
     if (!raw || typeof raw !== 'object') continue;
     models[modelId] = normalizeModel(modelId, raw, providers);
   }

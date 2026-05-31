@@ -36,12 +36,25 @@ function checkSemanticInvariants(catalog, schema) {
   }
 
   // Schema enforces maximum:1 on cost fields, but the bare "must be <= 1" message
-  // is cryptic. Re-flag with the actionable unit-error diagnosis.
+  // is cryptic. Two diagnostic tiers, applied only to per-TOKEN fields (non-token
+  // fields like per_image / per_second / per_query have different value scales):
+  //   > 1     → hard fail  (schema also catches this; message is more actionable)
+  //   > 0.001 → warning    (> $1,000/M tokens — almost certainly a per-million unit
+  //                          error; kept as warn so upstream noise doesn't block CI)
   const costKeys = costFieldsFromSchema(schema);
+  const tokenCostKeys = costKeys.filter((k) => k.includes('_token'));
   for (const [id, m] of Object.entries(models)) {
     for (const costKey of costKeys) {
-      if (typeof m[costKey] === 'number' && m[costKey] > 1) {
-        fail(`${id}: ${costKey}=${m[costKey]} > 1 USD/token — likely a per-million vs per-token unit error`);
+      const v = m[costKey];
+      if (typeof v !== 'number') continue;
+      if (v > 1) {
+        fail(`${id}: ${costKey}=${v} > 1 USD/token — likely a per-million vs per-token unit error`);
+      }
+    }
+    for (const costKey of tokenCostKeys) {
+      const v = m[costKey];
+      if (typeof v === 'number' && v > 0.001) {
+        warn(`${id}: ${costKey}=${v} > $1,000/M tokens — verify this is not a per-million unit error`);
       }
     }
   }

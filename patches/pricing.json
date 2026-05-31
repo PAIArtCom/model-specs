@@ -19,11 +19,6 @@
     "_note": "Same gap as claude-sonnet-4-5. Sonnet 4.6 ships identical rates per Anthropic's May 2026 pricing page. Source: https://www.anthropic.com/pricing (2026-05-31)"
   },
 
-  "gemini-2.5-pro": {
-    "input_cost_per_audio_token": 3e-6,
-    "_note": "LiteLLM missing audio input cost for 2.5-pro (2.5-flash and 2.5-flash-lite both have it). Google pricing page lists 2.5-pro audio input at $3/M. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-05-31)"
-  },
-
   "gemini-3.1-pro": {
     "provider": "gemini",
     "platform": "gemini",
