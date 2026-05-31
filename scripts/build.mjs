@@ -94,6 +94,17 @@ function normalizeModel(modelId, raw, providers) {
     // Image pricing
     input_cost_per_image: num(raw.input_cost_per_image),
     output_cost_per_image: num(raw.output_cost_per_image),
+    // Context-tier pricing (long-context surcharges)
+    input_cost_per_token_above_200k_tokens: num(raw.input_cost_per_token_above_200k_tokens),
+    output_cost_per_token_above_200k_tokens: num(raw.output_cost_per_token_above_200k_tokens),
+    cache_read_input_token_cost_above_200k_tokens: num(raw.cache_read_input_token_cost_above_200k_tokens),
+    cache_creation_input_token_cost_above_200k_tokens: num(raw.cache_creation_input_token_cost_above_200k_tokens),
+    input_cost_per_token_above_272k_tokens: num(raw.input_cost_per_token_above_272k_tokens),
+    output_cost_per_token_above_272k_tokens: num(raw.output_cost_per_token_above_272k_tokens),
+    cache_read_input_token_cost_above_272k_tokens: num(raw.cache_read_input_token_cost_above_272k_tokens),
+    // Rate limits
+    rpm: (Number.isInteger(raw.rpm) && raw.rpm > 0) ? raw.rpm : undefined,
+    tpm: (Number.isInteger(raw.tpm) && raw.tpm > 0) ? raw.tpm : undefined,
     // Model metadata
     output_vector_size: num(raw.output_vector_size),
     deprecation_date: (typeof raw.deprecation_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(raw.deprecation_date))
