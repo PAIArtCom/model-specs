@@ -1,5 +1,7 @@
 # model-specs
 
+![model-specs hero](assets/hero.png)
+
 A community catalog of **LLM model specifications** — pricing, context windows,
 capabilities, and client/CLI compatibility — kept fresh by automatically syncing
 [LiteLLM](https://github.com/BerriAI/litellm)'s model database and layering
