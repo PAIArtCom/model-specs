@@ -1,5 +1,5 @@
 {
-  "version": "ddaaa665d3c9",
+  "version": "c87c40012e2a",
   "generated_at": "2026-05-31T15:11:29.222Z",
   "upstream": {
     "source": "litellm",
@@ -592,7 +592,8 @@
         "prompt_caching": true,
         "response_schema": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -642,7 +643,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -664,7 +666,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -686,7 +689,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -766,7 +770,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -790,7 +795,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -841,7 +847,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -863,7 +870,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -887,7 +895,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -985,7 +994,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1013,7 +1023,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1037,7 +1048,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1329,7 +1341,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1390,7 +1403,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1416,7 +1430,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1457,7 +1472,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1554,7 +1570,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -1577,7 +1594,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -5418,7 +5436,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -5441,7 +5460,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -5464,7 +5484,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -5556,7 +5577,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -5579,7 +5601,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -5696,7 +5719,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -5712,7 +5736,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -6288,7 +6313,8 @@
       "max_output_tokens": 8191,
       "capabilities": {
         "function_calling": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8040,7 +8066,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8063,7 +8090,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8086,7 +8114,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8225,7 +8254,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8267,7 +8297,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8290,7 +8321,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8313,7 +8345,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -8638,7 +8671,8 @@
         "prompt_caching": true,
         "response_schema": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9077,7 +9111,8 @@
         "web_search": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9097,7 +9132,8 @@
         "vision": true,
         "prompt_caching": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9118,7 +9154,8 @@
         "vision": true,
         "prompt_caching": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9140,7 +9177,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9167,7 +9205,8 @@
         "web_search": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9190,7 +9229,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9213,7 +9253,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9236,7 +9277,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9260,7 +9302,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9284,7 +9327,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9307,7 +9351,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9330,7 +9375,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9473,7 +9519,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9499,7 +9546,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "patch",
       "cache_creation_input_token_cost_above_1hr": 0.000006
@@ -9527,7 +9575,8 @@
         "web_search": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9553,7 +9602,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9575,7 +9625,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "patch",
       "cache_creation_input_token_cost_above_1hr": 0.000006
@@ -9633,7 +9684,8 @@
       "max_input_tokens": 32000,
       "max_output_tokens": 8191,
       "capabilities": {
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -9646,7 +9698,8 @@
       "max_input_tokens": 32000,
       "max_output_tokens": 8191,
       "capabilities": {
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10535,7 +10588,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10550,7 +10604,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10565,7 +10620,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10580,7 +10636,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10595,7 +10652,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10610,7 +10668,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10625,7 +10684,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -10640,7 +10700,8 @@
       "capabilities": {
         "function_calling": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12200,7 +12261,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12251,7 +12313,8 @@
         "response_schema": true,
         "tool_choice": true,
         "system_messages": true,
-        "parallel_function_calling": true
+        "parallel_function_calling": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12266,7 +12329,8 @@
       "capabilities": {
         "function_calling": true,
         "prompt_caching": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12282,7 +12346,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12299,7 +12364,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "response_schema": true,
-        "system_messages": true
+        "system_messages": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12316,7 +12382,8 @@
       "capabilities": {
         "function_calling": true,
         "prompt_caching": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12332,7 +12399,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12620,7 +12688,8 @@
         "prompt_caching": true,
         "response_schema": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12660,7 +12729,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12682,7 +12752,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12762,7 +12833,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12784,7 +12856,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12806,7 +12879,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12829,7 +12903,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12925,7 +13000,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12952,7 +13028,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -12975,7 +13052,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -17162,7 +17240,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -17189,7 +17268,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -18124,7 +18204,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -18153,7 +18234,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -19158,7 +19240,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -19202,7 +19285,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -19226,7 +19310,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -19324,7 +19409,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -19352,7 +19438,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -19376,7 +19463,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -22852,7 +22940,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -22879,7 +22968,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -22902,7 +22992,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -22918,7 +23009,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24426,7 +24518,8 @@
       "max_output_tokens": 8191,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24441,7 +24534,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24473,7 +24567,8 @@
       "max_output_tokens": 8191,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24486,7 +24581,8 @@
       "max_input_tokens": 256000,
       "max_output_tokens": 256000,
       "capabilities": {
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24501,7 +24597,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24516,7 +24613,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24531,7 +24629,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24546,7 +24645,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24561,7 +24661,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24576,7 +24677,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24591,7 +24693,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24606,7 +24709,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24622,7 +24726,8 @@
         "function_calling": true,
         "reasoning": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24638,7 +24743,8 @@
         "function_calling": true,
         "reasoning": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24654,7 +24760,8 @@
         "function_calling": true,
         "reasoning": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24670,7 +24777,8 @@
         "function_calling": true,
         "reasoning": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24686,7 +24794,8 @@
         "function_calling": true,
         "reasoning": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24702,7 +24811,8 @@
         "function_calling": true,
         "reasoning": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24718,7 +24828,8 @@
         "function_calling": true,
         "reasoning": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24734,7 +24845,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24750,7 +24862,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24766,7 +24879,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24782,7 +24896,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24806,7 +24921,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24821,7 +24937,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24836,7 +24953,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24852,7 +24970,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24868,7 +24987,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24884,7 +25004,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24898,7 +25019,8 @@
       "max_output_tokens": 8191,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24912,7 +25034,8 @@
       "max_output_tokens": 8191,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24927,7 +25050,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24943,7 +25067,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24959,7 +25084,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -24988,7 +25114,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25004,7 +25131,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25020,7 +25148,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25034,7 +25163,8 @@
       "max_output_tokens": 8191,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25047,7 +25177,8 @@
       "max_input_tokens": 256000,
       "max_output_tokens": 256000,
       "capabilities": {
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25061,7 +25192,8 @@
       "max_output_tokens": 8191,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25075,7 +25207,8 @@
       "max_output_tokens": 128000,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25089,7 +25222,8 @@
       "max_output_tokens": 128000,
       "capabilities": {
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25104,7 +25238,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25119,7 +25254,8 @@
       "capabilities": {
         "function_calling": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25135,7 +25271,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25151,7 +25288,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -25167,7 +25305,8 @@
         "function_calling": true,
         "vision": true,
         "response_schema": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -28984,7 +29123,8 @@
         "function_calling": true,
         "vision": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29002,7 +29142,8 @@
         "vision": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29022,7 +29163,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29043,7 +29185,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29065,7 +29208,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29085,7 +29229,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29105,7 +29250,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29152,7 +29298,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29177,7 +29324,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29201,7 +29349,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29258,7 +29407,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29274,7 +29424,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29290,7 +29441,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29306,7 +29458,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29321,7 +29474,8 @@
       "capabilities": {
         "function_calling": true,
         "prompt_caching": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -29465,7 +29619,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -29494,7 +29649,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -30541,7 +30697,8 @@
         "function_calling": true,
         "vision": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34101,7 +34258,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34235,7 +34393,8 @@
         "prompt_caching": true,
         "response_schema": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34275,7 +34434,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34297,7 +34457,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34377,7 +34538,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34399,7 +34561,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34421,7 +34584,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34445,7 +34609,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34543,7 +34708,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34571,7 +34737,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -34595,7 +34762,8 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "native_structured_output": true
+        "native_structured_output": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35007,7 +35175,8 @@
         "prompt_caching": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35027,7 +35196,8 @@
         "prompt_caching": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35048,7 +35218,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35193,7 +35364,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35214,7 +35386,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35235,7 +35408,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35256,7 +35430,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35277,7 +35452,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35298,7 +35474,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -35318,7 +35495,8 @@
         "prompt_caching": true,
         "reasoning": true,
         "tool_choice": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36372,7 +36550,8 @@
       "capabilities": {
         "function_calling": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36387,7 +36566,8 @@
       "capabilities": {
         "function_calling": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36404,7 +36584,8 @@
         "vision": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36420,7 +36601,8 @@
         "function_calling": true,
         "vision": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36443,7 +36625,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36458,7 +36641,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36473,7 +36657,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36488,7 +36673,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36503,7 +36689,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36518,7 +36705,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36533,7 +36721,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36554,7 +36743,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36575,7 +36765,8 @@
         "reasoning": true,
         "response_schema": true,
         "tool_choice": true,
-        "pdf_input": true
+        "pdf_input": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36597,7 +36788,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36616,7 +36808,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36635,7 +36828,8 @@
       "capabilities": {
         "function_calling": true,
         "vision": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36657,7 +36851,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36679,7 +36874,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36835,7 +37031,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36861,7 +37058,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36889,7 +37087,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36917,7 +37116,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36939,7 +37139,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36961,7 +37162,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -36987,7 +37189,8 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -37097,7 +37300,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -37113,7 +37317,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -37131,7 +37336,8 @@
         "function_calling": true,
         "prompt_caching": true,
         "reasoning": true,
-        "tool_choice": true
+        "tool_choice": true,
+        "assistant_prefill": true
       },
       "source": "litellm"
     },
@@ -37277,7 +37483,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -37304,7 +37511,8 @@
         "system_messages": true,
         "parallel_function_calling": true,
         "pdf_input": true,
-        "video_input": true
+        "video_input": true,
+        "code_execution": true
       },
       "source": "litellm"
     },
@@ -38469,111 +38677,111 @@
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.01,
-      "output_cost_per_token": 0.01,
+      "input_cost_per_token": 1e-8,
+      "output_cost_per_token": 1e-8,
       "max_input_tokens": 262144,
       "max_output_tokens": 262144,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/Qwen/Qwen3-235B-A22B-Thinking-2507": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.01,
-      "output_cost_per_token": 0.01,
+      "input_cost_per_token": 1e-8,
+      "output_cost_per_token": 1e-8,
       "max_input_tokens": 262144,
       "max_output_tokens": 262144,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/Qwen/Qwen3-Coder-480B-A35B-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.1,
-      "output_cost_per_token": 0.15,
+      "input_cost_per_token": 1e-7,
+      "output_cost_per_token": 1.5e-7,
       "max_input_tokens": 262144,
       "max_output_tokens": 262144,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/deepseek-ai/DeepSeek-R1-0528": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.135,
-      "output_cost_per_token": 0.54,
+      "input_cost_per_token": 1.35e-7,
+      "output_cost_per_token": 5.4e-7,
       "max_input_tokens": 161000,
       "max_output_tokens": 161000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/deepseek-ai/DeepSeek-V3-0324": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.114,
-      "output_cost_per_token": 0.275,
+      "input_cost_per_token": 1.14e-7,
+      "output_cost_per_token": 2.75e-7,
       "max_input_tokens": 161000,
       "max_output_tokens": 161000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/deepseek-ai/DeepSeek-V3.1": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.055,
-      "output_cost_per_token": 0.165,
+      "input_cost_per_token": 5.5e-8,
+      "output_cost_per_token": 1.65e-7,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/meta-llama/Llama-3.1-8B-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.022,
-      "output_cost_per_token": 0.022,
+      "input_cost_per_token": 2.2e-8,
+      "output_cost_per_token": 2.2e-8,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/meta-llama/Llama-3.3-70B-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.071,
-      "output_cost_per_token": 0.071,
+      "input_cost_per_token": 7.1e-8,
+      "output_cost_per_token": 7.1e-8,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.017,
-      "output_cost_per_token": 0.066,
+      "input_cost_per_token": 1.7e-8,
+      "output_cost_per_token": 6.6e-8,
       "max_input_tokens": 64000,
       "max_output_tokens": 64000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/microsoft/Phi-4-mini-instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.008,
-      "output_cost_per_token": 0.035,
+      "input_cost_per_token": 8e-9,
+      "output_cost_per_token": 3.5e-8,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/moonshotai/Kimi-K2-Instruct": {
       "provider": "wandb",
@@ -38607,34 +38815,34 @@
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.015,
-      "output_cost_per_token": 0.06,
+      "input_cost_per_token": 1.5e-8,
+      "output_cost_per_token": 6e-8,
       "max_input_tokens": 131072,
       "max_output_tokens": 131072,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/openai/gpt-oss-20b": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.005,
-      "output_cost_per_token": 0.02,
+      "input_cost_per_token": 5e-9,
+      "output_cost_per_token": 2e-8,
       "max_input_tokens": 131072,
       "max_output_tokens": 131072,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/zai-org/GLM-4.5": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.055,
-      "output_cost_per_token": 0.2,
+      "input_cost_per_token": 5.5e-8,
+      "output_cost_per_token": 2e-7,
       "max_input_tokens": 131072,
       "max_output_tokens": 131072,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "watsonx/bigscience/mt0-xxl-13b": {
       "provider": "watsonx",

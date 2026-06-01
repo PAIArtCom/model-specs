@@ -26,7 +26,7 @@
         "properties": {
           "provider": { "type": "string", "minLength": 1 },
           "platform": { "type": "string", "minLength": 1 },
-          "mode": { "type": "string" },
+          "mode": { "type": "string", "enum": ["audio_speech","audio_transcription","chat","completion","embedding","image_edit","image_generation","moderation","ocr","realtime","rerank","responses","search","unknown","vector_store","video_generation"] },
           "input_cost_per_token": { "type": "number", "minimum": 0, "maximum": 1 },
           "output_cost_per_token": { "type": "number", "minimum": 0, "maximum": 1 },
           "cache_read_input_token_cost": { "type": "number", "minimum": 0, "maximum": 1 },

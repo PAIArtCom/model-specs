@@ -38,5 +38,73 @@
     "max_input_tokens": 131072,
     "max_output_tokens": 131072,
     "_note": "Open-weight model (Apache 2.0). No official API pricing — not served via OpenAI API, deployed via self-hosting or third parties. Source: https://platform.openai.com/docs/models/gpt-oss-120b (2026-05-31)"
+  },
+
+  "_wandb_unit_error_note": "The following 13 wandb/* entries have LiteLLM upstream data quality bugs: per-million-token prices were stored in the per-token field (off by 1e6). Corrected by dividing the raw value by 1,000,000. Values are plausible inference rates for the wandb.ai platform.",
+
+  "wandb/deepseek-ai/DeepSeek-R1-0528": {
+    "input_cost_per_token": 1.35e-7,
+    "output_cost_per_token": 5.4e-7,
+    "_note": "Unit error in LiteLLM upstream (per-M stored as per-token). Corrected: 0.135→1.35e-7, 0.54→5.4e-7."
+  },
+  "wandb/deepseek-ai/DeepSeek-V3-0324": {
+    "input_cost_per_token": 1.14e-7,
+    "output_cost_per_token": 2.75e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.114→1.14e-7, 0.275→2.75e-7."
+  },
+  "wandb/deepseek-ai/DeepSeek-V3.1": {
+    "input_cost_per_token": 5.5e-8,
+    "output_cost_per_token": 1.65e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.165→1.65e-7."
+  },
+  "wandb/meta-llama/Llama-3.1-8B-Instruct": {
+    "input_cost_per_token": 2.2e-8,
+    "output_cost_per_token": 2.2e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.022→2.2e-8."
+  },
+  "wandb/meta-llama/Llama-3.3-70B-Instruct": {
+    "input_cost_per_token": 7.1e-8,
+    "output_cost_per_token": 7.1e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.071→7.1e-8."
+  },
+  "wandb/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
+    "input_cost_per_token": 1.7e-8,
+    "output_cost_per_token": 6.6e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.017→1.7e-8, 0.066→6.6e-8."
+  },
+  "wandb/microsoft/Phi-4-mini-instruct": {
+    "input_cost_per_token": 8e-9,
+    "output_cost_per_token": 3.5e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.008→8e-9, 0.035→3.5e-8."
+  },
+  "wandb/openai/gpt-oss-120b": {
+    "input_cost_per_token": 1.5e-8,
+    "output_cost_per_token": 6e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.015→1.5e-8, 0.06→6e-8."
+  },
+  "wandb/openai/gpt-oss-20b": {
+    "input_cost_per_token": 5e-9,
+    "output_cost_per_token": 2e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.005→5e-9, 0.02→2e-8."
+  },
+  "wandb/Qwen/Qwen3-235B-A22B-Instruct-2507": {
+    "input_cost_per_token": 1e-8,
+    "output_cost_per_token": 1e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8."
+  },
+  "wandb/Qwen/Qwen3-235B-A22B-Thinking-2507": {
+    "input_cost_per_token": 1e-8,
+    "output_cost_per_token": 1e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8."
+  },
+  "wandb/Qwen/Qwen3-Coder-480B-A35B-Instruct": {
+    "input_cost_per_token": 1e-7,
+    "output_cost_per_token": 1.5e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.1→1e-7, 0.15→1.5e-7."
+  },
+  "wandb/zai-org/GLM-4.5": {
+    "input_cost_per_token": 5.5e-8,
+    "output_cost_per_token": 2e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.2→2e-7."
   }
 }

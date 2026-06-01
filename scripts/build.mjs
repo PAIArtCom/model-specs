@@ -37,6 +37,8 @@ const CAP_MAP = {
   supports_computer_use: 'computer_use',
   supports_native_structured_output: 'native_structured_output',
   supports_video_input: 'video_input',
+  supports_assistant_prefill: 'assistant_prefill',
+  supports_code_execution: 'code_execution',
 };
 
 function resolvePlatform(modelId, provider, providers) {
