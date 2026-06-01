@@ -40,6 +40,12 @@
     "_note": "Open-weight model (Apache 2.0). No official API pricing — not served via OpenAI API, deployed via self-hosting or third parties. Source: https://platform.openai.com/docs/models/gpt-oss-120b (2026-05-31)"
   },
 
+  "azure_ai/jais-30b-chat": {
+    "input_cost_per_token": 3.2e-6,
+    "output_cost_per_token": 9.71e-6,
+    "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x). Official Azure Marketplace: $0.0032/1K input, $0.00971/1K output. Source: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/core42.core42-jais30b-v3-chat-offer (2026-06-01)"
+  },
+
   "_wandb_unit_error_note": "The following 13 wandb/* entries have LiteLLM upstream data quality bugs: per-million-token prices were stored in the per-token field (off by 1e6). Corrected by dividing the raw value by 1,000,000. Values are plausible inference rates for the wandb.ai platform.",
 
   "wandb/deepseek-ai/DeepSeek-R1-0528": {

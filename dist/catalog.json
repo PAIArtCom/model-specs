@@ -1,5 +1,5 @@
 {
-  "version": "b6242799165c",
+  "version": "3ef939159fa8",
   "generated_at": "2026-05-31T15:11:29.222Z",
   "upstream": {
     "source": "litellm",
@@ -6182,12 +6182,12 @@
       "provider": "azure_ai",
       "platform": "openai",
       "mode": "chat",
-      "input_cost_per_token": 0.0032,
-      "output_cost_per_token": 0.00971,
+      "input_cost_per_token": 0.0000032,
+      "output_cost_per_token": 0.00000971,
       "max_input_tokens": 8192,
       "max_output_tokens": 8192,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "azure_ai/jamba-instruct": {
       "provider": "azure_ai",

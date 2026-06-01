@@ -22,13 +22,14 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm ci
-      - name: Sync upstream + rebuild + validate
+      - name: Sync upstream
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm run sync
-          npm run build
-          npm run validate
+        run: npm run sync
+      - name: Build
+        run: npm run build
+      - name: Validate
+        run: npm run validate
       - name: Open PR if changed
         uses: peter-evans/create-pull-request@v6
         with:
