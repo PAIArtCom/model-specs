@@ -1,5 +1,5 @@
 {
-  "version": "3ef939159fa8",
+  "version": "1ceedbb56329",
   "generated_at": "2026-05-31T15:11:29.222Z",
   "upstream": {
     "source": "litellm",
@@ -38848,23 +38848,23 @@
       "provider": "watsonx",
       "platform": "watsonx",
       "mode": "chat",
-      "input_cost_per_token": 0.0005,
-      "output_cost_per_token": 0.002,
+      "input_cost_per_token": 5e-7,
+      "output_cost_per_token": 0.000002,
       "max_input_tokens": 8192,
       "max_output_tokens": 8192,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "watsonx/core42/jais-13b-chat": {
       "provider": "watsonx",
       "platform": "watsonx",
       "mode": "chat",
-      "input_cost_per_token": 0.0005,
-      "output_cost_per_token": 0.002,
+      "input_cost_per_token": 5e-7,
+      "output_cost_per_token": 0.000002,
       "max_input_tokens": 8192,
       "max_output_tokens": 8192,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "watsonx/google/flan-t5-xl-3b": {
       "provider": "watsonx",

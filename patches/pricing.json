@@ -46,6 +46,18 @@
     "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x). Official Azure Marketplace: $0.0032/1K input, $0.00971/1K output. Source: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/core42.core42-jais30b-v3-chat-offer (2026-06-01)"
   },
 
+  "watsonx/bigscience/mt0-xxl-13b": {
+    "input_cost_per_token": 5e-7,
+    "output_cost_per_token": 2e-6,
+    "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x): 0.0005→5e-7, 0.002→2e-6. Official IBM WatsonX: $0.50/M input, $2.00/M output. Source: https://cloudprice.net/models/watsonx/bigscience/mt0-xxl-13b (2026-06-01, sourced from IBM docs)"
+  },
+
+  "watsonx/core42/jais-13b-chat": {
+    "input_cost_per_token": 5e-7,
+    "output_cost_per_token": 2e-6,
+    "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x): 0.0005→5e-7, 0.002→2e-6. Official IBM WatsonX: $0.50/M input, $2.00/M output. Source: https://cloudprice.net/models/watsonx/core42/jais-13b-chat (2026-06-01, sourced from IBM docs)"
+  },
+
   "_wandb_unit_error_note": "The following 13 wandb/* entries have LiteLLM upstream data quality bugs: per-million-token prices were stored in the per-token field (off by 1e6). Corrected by dividing the raw value by 1,000,000. Values are plausible inference rates for the wandb.ai platform.",
 
   "wandb/deepseek-ai/DeepSeek-R1-0528": {
