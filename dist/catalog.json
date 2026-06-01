@@ -1,5 +1,5 @@
 {
-  "version": "c87c40012e2a",
+  "version": "b31b8031eb26",
   "generated_at": "2026-05-31T15:11:29.222Z",
   "upstream": {
     "source": "litellm",
@@ -9399,9 +9399,10 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-opus-4-6-20260205": {
       "provider": "anthropic",
@@ -9422,9 +9423,10 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-opus-4-7": {
       "provider": "anthropic",
@@ -9445,9 +9447,10 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-opus-4-7-20260416": {
       "provider": "anthropic",
@@ -9468,9 +9471,10 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-opus-4-8": {
       "provider": "anthropic",
@@ -9491,9 +9495,10 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": true
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-sonnet-4-20250514": {
       "provider": "anthropic",
