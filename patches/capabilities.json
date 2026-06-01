@@ -7,13 +7,12 @@
     "_note": "why this correction exists + source link"
   },
 
-  "_claude_opus_prefill_note": "LiteLLM stores supports_assistant_prefill=false for all claude-opus-4-x direct API models but true for claude-sonnet-4-5/4-6 and claude-4-opus-20250514. Anthropic docs confirm prefill is supported across all Claude 4. This is a LiteLLM data gap, not a real capability difference.",
+  "_claude_prefill_note": "Anthropic deprecated assistant prefill starting with Claude 4.6 models — requests with a prefilled last assistant turn return 400. Source: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices (2026-06-01). LiteLLM correctly marks claude-opus-4-6/4-7/4-8 as false. However claude-sonnet-4-6 is incorrectly marked true in LiteLLM upstream — patched below.",
 
-  "claude-opus-4-6": { "assistant_prefill": true },
-  "claude-opus-4-6-20260205": { "assistant_prefill": true },
-  "claude-opus-4-7": { "assistant_prefill": true },
-  "claude-opus-4-7-20260416": { "assistant_prefill": true },
-  "claude-opus-4-8": { "assistant_prefill": true },
+  "claude-sonnet-4-6": {
+    "assistant_prefill": false,
+    "_note": "LiteLLM upstream incorrectly sets supports_assistant_prefill=true. Anthropic docs confirm prefill is not supported on any Claude 4.6+ model."
+  },
 
   "gemini-3.1-pro": {
     "function_calling": true,
