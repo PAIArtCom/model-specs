@@ -96,9 +96,11 @@ function normalizeModel(modelId, raw, providers) {
     output_cost_per_token_priority: numCost(raw.output_cost_per_token_priority),
     input_cost_per_token_flex: numCost(raw.input_cost_per_token_flex),
     output_cost_per_token_flex: numCost(raw.output_cost_per_token_flex),
-    // Image pricing
+    // Image pricing (per-image flat rate OR per-pixel for resolution-variant models)
     input_cost_per_image: numCost(raw.input_cost_per_image),
     output_cost_per_image: numCost(raw.output_cost_per_image),
+    input_cost_per_pixel: numCost(raw.input_cost_per_pixel),
+    output_cost_per_pixel: numCost(raw.output_cost_per_pixel),
     // Context-tier pricing (long-context surcharges)
     input_cost_per_token_above_200k_tokens: numCost(raw.input_cost_per_token_above_200k_tokens),
     output_cost_per_token_above_200k_tokens: numCost(raw.output_cost_per_token_above_200k_tokens),

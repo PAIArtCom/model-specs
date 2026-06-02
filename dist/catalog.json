@@ -1,5 +1,5 @@
 {
-  "version": "1ceedbb56329",
+  "version": "3c784970b294",
   "generated_at": "2026-05-31T15:11:29.222Z",
   "upstream": {
     "source": "litellm",
@@ -29,6 +29,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.9e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -111,6 +113,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 2.4414e-7,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -127,6 +131,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 6.86e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4018,6 +4024,7 @@
       "platform": "openai",
       "mode": "image_generation",
       "output_cost_per_token": 0,
+      "input_cost_per_pixel": 7.629e-8,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4026,6 +4033,7 @@
       "platform": "openai",
       "mode": "image_generation",
       "output_cost_per_token": 0,
+      "input_cost_per_pixel": 6.539e-8,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4034,6 +4042,7 @@
       "platform": "openai",
       "mode": "image_generation",
       "output_cost_per_token": 0,
+      "input_cost_per_pixel": 6.539e-8,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4041,6 +4050,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.59263611e-7,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4048,6 +4059,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 3.173828125e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4055,6 +4068,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.58945719e-7,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4062,6 +4077,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 3.173828125e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4069,6 +4086,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.58945719e-7,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4076,6 +4095,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 3.1575520833e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4083,6 +4104,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.0490417e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4090,6 +4113,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 2.0751953125e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4097,6 +4122,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.0172526e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4104,6 +4131,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 2.0751953125e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4111,6 +4140,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.0172526e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4118,6 +4149,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 2.0345052083e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4125,6 +4158,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 4.0054321e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4132,6 +4167,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 8.056640625e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4139,6 +4176,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 4.0054321e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4146,6 +4185,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 8.056640625e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4153,6 +4194,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 4.0054321e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4160,6 +4203,8 @@
       "provider": "azure",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 7.9752604167e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4516,6 +4561,7 @@
       "platform": "openai",
       "mode": "image_generation",
       "output_cost_per_token": 0,
+      "input_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4524,6 +4570,7 @@
       "platform": "openai",
       "mode": "image_generation",
       "output_cost_per_token": 0,
+      "input_cost_per_pixel": 3.81469e-8,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4532,6 +4579,7 @@
       "platform": "openai",
       "mode": "image_generation",
       "output_cost_per_token": 0,
+      "input_cost_per_pixel": 4.359e-8,
       "capabilities": {},
       "source": "litellm"
     },
@@ -4540,6 +4588,7 @@
       "platform": "openai",
       "mode": "image_generation",
       "output_cost_per_token": 0,
+      "input_cost_per_pixel": 4.359e-8,
       "capabilities": {},
       "source": "litellm"
     },
@@ -22345,6 +22394,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 7.629e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -22352,6 +22403,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 6.539e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -22359,6 +22412,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 6.539e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -22419,6 +22474,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.167,
+      "input_cost_per_pixel": 1.59263611e-7,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -22449,6 +22506,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.25,
+      "input_cost_per_pixel": 1.58945719e-7,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -22479,6 +22538,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.25,
+      "input_cost_per_pixel": 1.58945719e-7,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -23656,6 +23717,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.011,
+      "input_cost_per_pixel": 1.0490417e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -23694,6 +23757,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.016,
+      "input_cost_per_pixel": 1.0172526e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -23732,6 +23797,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.016,
+      "input_cost_per_pixel": 1.0172526e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -23788,6 +23855,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.042,
+      "input_cost_per_pixel": 4.0054321e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -23826,6 +23895,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.063,
+      "input_cost_per_pixel": 4.0054321e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -23864,6 +23935,8 @@
       "platform": "openai",
       "mode": "image_generation",
       "input_cost_per_image": 0.063,
+      "input_cost_per_pixel": 4.0054321e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -27521,6 +27594,8 @@
       "provider": "nscale",
       "platform": "nscale",
       "mode": "image_generation",
+      "input_cost_per_pixel": 1.3e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -27618,6 +27693,8 @@
       "provider": "nscale",
       "platform": "nscale",
       "mode": "image_generation",
+      "input_cost_per_pixel": 3e-9,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -33337,6 +33414,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 3.81469e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -33388,6 +33467,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 4.359e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
@@ -33417,6 +33498,8 @@
       "provider": "openai",
       "platform": "openai",
       "mode": "image_generation",
+      "input_cost_per_pixel": 4.359e-8,
+      "output_cost_per_pixel": 0,
       "capabilities": {},
       "source": "litellm"
     },
