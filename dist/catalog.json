@@ -1,5 +1,5 @@
 {
-  "version": "75774c635519",
+  "version": "3297be49b212",
   "generated_at": "2026-05-31T15:11:29.222Z",
   "upstream": {
     "source": "litellm",
@@ -23224,24 +23224,6 @@
         "vision": true,
         "response_schema": true
       },
-      "source": "litellm"
-    },
-    "max-x-max/50-steps/stability.stable-diffusion-xl-v0": {
-      "provider": "bedrock",
-      "platform": "bedrock",
-      "mode": "image_generation",
-      "output_cost_per_image": 0.036,
-      "max_input_tokens": 77,
-      "capabilities": {},
-      "source": "litellm"
-    },
-    "max-x-max/max-steps/stability.stable-diffusion-xl-v0": {
-      "provider": "bedrock",
-      "platform": "bedrock",
-      "mode": "image_generation",
-      "output_cost_per_image": 0.072,
-      "max_input_tokens": 77,
-      "capabilities": {},
       "source": "litellm"
     },
     "medlm-large": {
