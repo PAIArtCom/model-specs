@@ -133,7 +133,11 @@ async function main() {
 
   const models = {};
   for (const [modelId, raw] of Object.entries(upstream)) {
-    if (modelId === 'sample_spec') continue; // LiteLLM documentation placeholder, not a real model
+    if (modelId === 'sample_spec') continue; // LiteLLM documentation placeholder
+    // Skip resolution-variant IDs that encode pixel dimensions (e.g. "1024-x-1024/dall-e-2",
+    // "hd/1024-x-1024/dall-e-3"). These are LiteLLM routing constructs, not canonical model
+    // names. The base model entries (dall-e-2, dall-e-3, etc.) carry the default pricing.
+    if (/\d+-x-\d+/.test(modelId)) continue;
     if (!raw || typeof raw !== 'object') continue;
     models[modelId] = normalizeModel(modelId, raw, providers);
   }
