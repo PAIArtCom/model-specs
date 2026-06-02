@@ -1,10 +1,10 @@
 {
   "version": "3297be49b212",
-  "generated_at": "2026-05-31T15:11:29.222Z",
+  "generated_at": "2026-06-02T13:33:15.365Z",
   "upstream": {
     "source": "litellm",
     "sha": "unknown",
-    "fetched_at": "2026-05-31T15:11:29.222Z"
+    "fetched_at": "2026-06-02T13:33:15.365Z"
   },
   "models": {
     "ai21.j2-mid-v1": {
