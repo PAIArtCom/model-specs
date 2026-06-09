@@ -2,3 +2,6 @@ node_modules/
 *.log
 .DS_Store
 .env
+
+# Specability agent runtime/local state
+.specability/
