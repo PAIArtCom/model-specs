@@ -2,8 +2,9 @@
   "client": "claude-code",
   "description": "Model ids accepted by Anthropic's Claude Code CLI (the --model flag / settings). LiteLLM does not track client-level acceptance; this is maintained by observation of the CLI.",
   "homepage": "https://code.claude.com",
-  "updated": "2026-05-31",
+  "updated": "2026-06-11",
   "models": [
+    "claude-fable-5",
     "claude-haiku-4-5-20251001",
     "claude-opus-4-6",
     "claude-opus-4-7",

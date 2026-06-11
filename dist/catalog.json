@@ -1,5 +1,5 @@
 {
-  "version": "5666ae921fef",
+  "version": "79afb3d1a657",
   "generated_at": "2026-06-09T16:00:03.078Z",
   "upstream": {
     "source": "litellm",
@@ -9003,6 +9003,30 @@
         "assistant_prefill": true
       },
       "source": "litellm"
+    },
+    "claude-fable-5": {
+      "provider": "anthropic",
+      "platform": "anthropic",
+      "mode": "chat",
+      "capabilities": {
+        "function_calling": true,
+        "vision": true,
+        "prompt_caching": true,
+        "reasoning": true,
+        "response_schema": true,
+        "tool_choice": true,
+        "pdf_input": true,
+        "computer_use": true,
+        "assistant_prefill": false
+      },
+      "input_cost_per_token": 0.00001,
+      "output_cost_per_token": 0.00005,
+      "cache_read_input_token_cost": 0.000001,
+      "cache_creation_input_token_cost": 0.0000125,
+      "cache_creation_input_token_cost_above_1hr": 0.00002,
+      "max_input_tokens": 1000000,
+      "max_output_tokens": 128000,
+      "source": "patch"
     },
     "claude-haiku-4-5": {
       "provider": "anthropic",
@@ -39969,8 +39993,9 @@
     "claude-code": {
       "description": "Model ids accepted by Anthropic's Claude Code CLI (the --model flag / settings). LiteLLM does not track client-level acceptance; this is maintained by observation of the CLI.",
       "homepage": "https://code.claude.com",
-      "updated": "2026-05-31",
+      "updated": "2026-06-11",
       "models": [
+        "claude-fable-5",
         "claude-haiku-4-5-20251001",
         "claude-opus-4-6",
         "claude-opus-4-7",

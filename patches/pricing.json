@@ -9,6 +9,20 @@
     "_note": "why this correction exists + source link"
   },
 
+  "claude-fable-5": {
+    "provider": "anthropic",
+    "platform": "anthropic",
+    "mode": "chat",
+    "input_cost_per_token": 0.00001,
+    "output_cost_per_token": 0.00005,
+    "cache_read_input_token_cost": 0.000001,
+    "cache_creation_input_token_cost": 0.0000125,
+    "cache_creation_input_token_cost_above_1hr": 0.00002,
+    "max_input_tokens": 1000000,
+    "max_output_tokens": 128000,
+    "_note": "Not yet in LiteLLM upstream. Pricing: $10/M input, $50/M output. Cache: read $1/M (0.1×), write $12.50/M (1.25×), write >1hr $20/M (2×). Source: https://www.anthropic.com/pricing (2026-06-11)"
+  },
+
   "claude-sonnet-4-5": {
     "cache_creation_input_token_cost_above_1hr": 6e-6,
     "_note": "LiteLLM missing extended-cache write cost (>1 hr TTL). Anthropic pricing page lists Sonnet 1h cache writes at $6/M — 2× base input, matching the Opus/Haiku pattern. Source: https://www.anthropic.com/pricing (2026-05-31)"

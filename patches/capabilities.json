@@ -9,6 +9,19 @@
 
   "_claude_prefill_note": "Anthropic deprecated assistant prefill starting with Claude 4.6 models — requests with a prefilled last assistant turn return 400. Source: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices (2026-06-01). LiteLLM correctly marks claude-opus-4-6/4-7/4-8 as false. However claude-sonnet-4-6 is incorrectly marked true in LiteLLM upstream — patched below.",
 
+  "claude-fable-5": {
+    "function_calling": true,
+    "vision": true,
+    "prompt_caching": true,
+    "reasoning": true,
+    "response_schema": true,
+    "tool_choice": true,
+    "pdf_input": true,
+    "computer_use": true,
+    "assistant_prefill": false,
+    "_note": "Not yet in LiteLLM upstream. Capabilities match Opus 4.8 (no prefill on 4.6+ generation). Source: https://docs.anthropic.com/en/docs/about-claude/models (2026-06-11)"
+  },
+
   "claude-sonnet-4-6": {
     "assistant_prefill": false,
     "_note": "LiteLLM upstream incorrectly sets supports_assistant_prefill=true. Anthropic docs confirm prefill is not supported on any Claude 4.6+ model."
