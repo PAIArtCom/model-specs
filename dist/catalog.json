@@ -1,5 +1,5 @@
 {
-  "version": "79afb3d1a657",
+  "version": "04f8f4ee7103",
   "generated_at": "2026-06-09T16:00:03.078Z",
   "upstream": {
     "source": "litellm",
@@ -21494,6 +21494,72 @@
         "pdf_input": true
       },
       "source": "litellm"
+    },
+    "gpt-5.6-luna": {
+      "provider": "openai",
+      "platform": "openai",
+      "mode": "chat",
+      "capabilities": {
+        "function_calling": true,
+        "vision": true,
+        "prompt_caching": true,
+        "reasoning": true,
+        "response_schema": true,
+        "web_search": true,
+        "tool_choice": true,
+        "system_messages": true,
+        "parallel_function_calling": true,
+        "pdf_input": true
+      },
+      "input_cost_per_token": 0.000001,
+      "output_cost_per_token": 0.000006,
+      "cache_read_input_token_cost": 1e-7,
+      "cache_creation_input_token_cost": 0.00000125,
+      "source": "patch"
+    },
+    "gpt-5.6-sol": {
+      "provider": "openai",
+      "platform": "openai",
+      "mode": "chat",
+      "capabilities": {
+        "function_calling": true,
+        "vision": true,
+        "prompt_caching": true,
+        "reasoning": true,
+        "response_schema": true,
+        "web_search": true,
+        "tool_choice": true,
+        "system_messages": true,
+        "parallel_function_calling": true,
+        "pdf_input": true
+      },
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.00003,
+      "cache_read_input_token_cost": 5e-7,
+      "cache_creation_input_token_cost": 0.00000625,
+      "source": "patch"
+    },
+    "gpt-5.6-terra": {
+      "provider": "openai",
+      "platform": "openai",
+      "mode": "chat",
+      "capabilities": {
+        "function_calling": true,
+        "vision": true,
+        "prompt_caching": true,
+        "reasoning": true,
+        "response_schema": true,
+        "web_search": true,
+        "tool_choice": true,
+        "system_messages": true,
+        "parallel_function_calling": true,
+        "pdf_input": true
+      },
+      "input_cost_per_token": 0.0000025,
+      "output_cost_per_token": 0.000015,
+      "cache_read_input_token_cost": 2.5e-7,
+      "cache_creation_input_token_cost": 0.000003125,
+      "source": "patch"
     },
     "gpt-audio": {
       "provider": "openai",

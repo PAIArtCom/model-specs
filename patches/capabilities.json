@@ -36,6 +36,48 @@
     "_note": "Source: https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview (2026-05-31)"
   },
 
+  "gpt-5.6-sol": {
+    "function_calling": true,
+    "vision": true,
+    "prompt_caching": true,
+    "reasoning": true,
+    "response_schema": true,
+    "web_search": true,
+    "tool_choice": true,
+    "system_messages": true,
+    "parallel_function_calling": true,
+    "pdf_input": true,
+    "_note": "Not yet in LiteLLM upstream. Mirrors the existing model-specs GPT-5.5 OpenAI capability surface pending upstream confirmation. Source for GPT-5.6 preview model IDs/API availability: https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna (2026-06-27)"
+  },
+
+  "gpt-5.6-terra": {
+    "function_calling": true,
+    "vision": true,
+    "prompt_caching": true,
+    "reasoning": true,
+    "response_schema": true,
+    "web_search": true,
+    "tool_choice": true,
+    "system_messages": true,
+    "parallel_function_calling": true,
+    "pdf_input": true,
+    "_note": "Not yet in LiteLLM upstream. Mirrors the existing model-specs GPT-5.5 OpenAI capability surface pending upstream confirmation. Source for GPT-5.6 preview model IDs/API availability: https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna (2026-06-27)"
+  },
+
+  "gpt-5.6-luna": {
+    "function_calling": true,
+    "vision": true,
+    "prompt_caching": true,
+    "reasoning": true,
+    "response_schema": true,
+    "web_search": true,
+    "tool_choice": true,
+    "system_messages": true,
+    "parallel_function_calling": true,
+    "pdf_input": true,
+    "_note": "Not yet in LiteLLM upstream. Mirrors the existing model-specs GPT-5.5 OpenAI capability surface pending upstream confirmation. Source for GPT-5.6 preview model IDs/API availability: https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna (2026-06-27)"
+  },
+
   "gpt-oss-120b": {
     "function_calling": true,
     "response_schema": true,

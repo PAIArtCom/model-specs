@@ -45,6 +45,39 @@
     "_note": "Standard tier pricing (prompt ≤ 200K tokens). Source: https://ai.google.dev/gemini-api/docs/pricing (2026-05-31)"
   },
 
+  "gpt-5.6-sol": {
+    "provider": "openai",
+    "platform": "openai",
+    "mode": "chat",
+    "input_cost_per_token": 0.000005,
+    "output_cost_per_token": 0.00003,
+    "cache_read_input_token_cost": 5e-7,
+    "cache_creation_input_token_cost": 0.00000625,
+    "_note": "Not yet in LiteLLM upstream. Pricing: $5/M input, $30/M output. Prompt cache writes: 1.25x input rate ($6.25/M). Cache reads: 90% discount ($0.50/M). Source: https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna (2026-06-27)"
+  },
+
+  "gpt-5.6-terra": {
+    "provider": "openai",
+    "platform": "openai",
+    "mode": "chat",
+    "input_cost_per_token": 0.0000025,
+    "output_cost_per_token": 0.000015,
+    "cache_read_input_token_cost": 2.5e-7,
+    "cache_creation_input_token_cost": 0.000003125,
+    "_note": "Not yet in LiteLLM upstream. Pricing: $2.50/M input, $15/M output. Prompt cache writes: 1.25x input rate ($3.125/M). Cache reads: 90% discount ($0.25/M). Source: https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna (2026-06-27)"
+  },
+
+  "gpt-5.6-luna": {
+    "provider": "openai",
+    "platform": "openai",
+    "mode": "chat",
+    "input_cost_per_token": 0.000001,
+    "output_cost_per_token": 0.000006,
+    "cache_read_input_token_cost": 1e-7,
+    "cache_creation_input_token_cost": 0.00000125,
+    "_note": "Not yet in LiteLLM upstream. Pricing: $1/M input, $6/M output. Prompt cache writes: 1.25x input rate ($1.25/M). Cache reads: 90% discount ($0.10/M). Source: https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna (2026-06-27)"
+  },
+
   "gpt-oss-120b": {
     "provider": "openai",
     "platform": "openai",
