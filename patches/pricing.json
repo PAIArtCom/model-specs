@@ -7,5 +7,136 @@
     "max_input_tokens": 128000,
     "max_output_tokens": 16384,
     "_note": "why this correction exists + source link"
+  },
+
+  "claude-fable-5": {
+    "provider": "anthropic",
+    "platform": "anthropic",
+    "mode": "chat",
+    "input_cost_per_token": 0.00001,
+    "output_cost_per_token": 0.00005,
+    "cache_read_input_token_cost": 0.000001,
+    "cache_creation_input_token_cost": 0.0000125,
+    "cache_creation_input_token_cost_above_1hr": 0.00002,
+    "max_input_tokens": 1000000,
+    "max_output_tokens": 128000,
+    "_note": "Not yet in LiteLLM upstream. Pricing: $10/M input, $50/M output. Cache: read $1/M (0.1×), write $12.50/M (1.25×), write >1hr $20/M (2×). Source: https://www.anthropic.com/pricing (2026-06-11)"
+  },
+
+  "claude-sonnet-4-5": {
+    "cache_creation_input_token_cost_above_1hr": 6e-6,
+    "_note": "LiteLLM missing extended-cache write cost (>1 hr TTL). Anthropic pricing page lists Sonnet 1h cache writes at $6/M — 2× base input, matching the Opus/Haiku pattern. Source: https://www.anthropic.com/pricing (2026-05-31)"
+  },
+
+  "claude-sonnet-4-6": {
+    "cache_creation_input_token_cost_above_1hr": 6e-6,
+    "_note": "Same gap as claude-sonnet-4-5. Sonnet 4.6 ships identical rates per Anthropic's May 2026 pricing page. Source: https://www.anthropic.com/pricing (2026-05-31)"
+  },
+
+  "gemini-3.1-pro": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "chat",
+    "input_cost_per_token": 0.000002,
+    "output_cost_per_token": 0.000012,
+    "cache_read_input_token_cost": 0.0000002,
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 65536,
+    "_note": "Standard tier pricing (prompt ≤ 200K tokens). Source: https://ai.google.dev/gemini-api/docs/pricing (2026-05-31)"
+  },
+
+  "gpt-oss-120b": {
+    "provider": "openai",
+    "platform": "openai",
+    "mode": "chat",
+    "max_input_tokens": 131072,
+    "max_output_tokens": 131072,
+    "_note": "Open-weight model (Apache 2.0). No official API pricing — not served via OpenAI API, deployed via self-hosting or third parties. Source: https://platform.openai.com/docs/models/gpt-oss-120b (2026-05-31)"
+  },
+
+  "azure_ai/jais-30b-chat": {
+    "input_cost_per_token": 3.2e-6,
+    "output_cost_per_token": 9.71e-6,
+    "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x). Official Azure Marketplace: $0.0032/1K input, $0.00971/1K output. Source: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/core42.core42-jais30b-v3-chat-offer (2026-06-01)"
+  },
+
+  "watsonx/bigscience/mt0-xxl-13b": {
+    "input_cost_per_token": 5e-7,
+    "output_cost_per_token": 2e-6,
+    "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x): 0.0005→5e-7, 0.002→2e-6. Official IBM WatsonX: $0.50/M input, $2.00/M output. Source: https://cloudprice.net/models/watsonx/bigscience/mt0-xxl-13b (2026-06-01, sourced from IBM docs)"
+  },
+
+  "watsonx/core42/jais-13b-chat": {
+    "input_cost_per_token": 5e-7,
+    "output_cost_per_token": 2e-6,
+    "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x): 0.0005→5e-7, 0.002→2e-6. Official IBM WatsonX: $0.50/M input, $2.00/M output. Source: https://cloudprice.net/models/watsonx/core42/jais-13b-chat (2026-06-01, sourced from IBM docs)"
+  },
+
+  "_wandb_unit_error_note": "The following 13 wandb/* entries have LiteLLM upstream data quality bugs: per-million-token prices were stored in the per-token field (off by 1e6). Corrected by dividing the raw value by 1,000,000. Values are plausible inference rates for the wandb.ai platform.",
+
+  "wandb/deepseek-ai/DeepSeek-R1-0528": {
+    "input_cost_per_token": 1.35e-7,
+    "output_cost_per_token": 5.4e-7,
+    "_note": "Unit error in LiteLLM upstream (per-M stored as per-token). Corrected: 0.135→1.35e-7, 0.54→5.4e-7."
+  },
+  "wandb/deepseek-ai/DeepSeek-V3-0324": {
+    "input_cost_per_token": 1.14e-7,
+    "output_cost_per_token": 2.75e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.114→1.14e-7, 0.275→2.75e-7."
+  },
+  "wandb/deepseek-ai/DeepSeek-V3.1": {
+    "input_cost_per_token": 5.5e-8,
+    "output_cost_per_token": 1.65e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.165→1.65e-7."
+  },
+  "wandb/meta-llama/Llama-3.1-8B-Instruct": {
+    "input_cost_per_token": 2.2e-8,
+    "output_cost_per_token": 2.2e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.022→2.2e-8."
+  },
+  "wandb/meta-llama/Llama-3.3-70B-Instruct": {
+    "input_cost_per_token": 7.1e-8,
+    "output_cost_per_token": 7.1e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.071→7.1e-8."
+  },
+  "wandb/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
+    "input_cost_per_token": 1.7e-8,
+    "output_cost_per_token": 6.6e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.017→1.7e-8, 0.066→6.6e-8."
+  },
+  "wandb/microsoft/Phi-4-mini-instruct": {
+    "input_cost_per_token": 8e-9,
+    "output_cost_per_token": 3.5e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.008→8e-9, 0.035→3.5e-8."
+  },
+  "wandb/openai/gpt-oss-120b": {
+    "input_cost_per_token": 1.5e-8,
+    "output_cost_per_token": 6e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.015→1.5e-8, 0.06→6e-8."
+  },
+  "wandb/openai/gpt-oss-20b": {
+    "input_cost_per_token": 5e-9,
+    "output_cost_per_token": 2e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.005→5e-9, 0.02→2e-8."
+  },
+  "wandb/Qwen/Qwen3-235B-A22B-Instruct-2507": {
+    "input_cost_per_token": 1e-8,
+    "output_cost_per_token": 1e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8."
+  },
+  "wandb/Qwen/Qwen3-235B-A22B-Thinking-2507": {
+    "input_cost_per_token": 1e-8,
+    "output_cost_per_token": 1e-8,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8."
+  },
+  "wandb/Qwen/Qwen3-Coder-480B-A35B-Instruct": {
+    "input_cost_per_token": 1e-7,
+    "output_cost_per_token": 1.5e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.1→1e-7, 0.15→1.5e-7."
+  },
+  "wandb/zai-org/GLM-4.5": {
+    "input_cost_per_token": 5.5e-8,
+    "output_cost_per_token": 2e-7,
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.2→2e-7."
   }
 }

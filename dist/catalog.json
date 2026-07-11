@@ -1,5 +1,5 @@
 {
-  "version": "6b5b7f9d4c13",
+  "version": "ea386576b9c8",
   "generated_at": "2026-07-11T13:07:11.834Z",
   "upstream": {
     "source": "litellm",
@@ -6708,12 +6708,12 @@
       "provider": "azure_ai",
       "platform": "openai",
       "mode": "chat",
-      "input_cost_per_token": 0.0032,
-      "output_cost_per_token": 0.00971,
+      "input_cost_per_token": 0.0000032,
+      "output_cost_per_token": 0.00000971,
       "max_input_tokens": 8192,
       "max_output_tokens": 8192,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "azure_ai/jamba-instruct": {
       "provider": "azure_ai",
@@ -9881,9 +9881,10 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true
+        "computer_use": true,
+        "assistant_prefill": false
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-haiku-4-5": {
       "provider": "anthropic",
@@ -10225,7 +10226,7 @@
         "computer_use": true,
         "assistant_prefill": true
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-sonnet-4-5-20250929": {
       "provider": "anthropic",
@@ -10304,9 +10305,9 @@
         "tool_choice": true,
         "pdf_input": true,
         "computer_use": true,
-        "assistant_prefill": true
+        "assistant_prefill": false
       },
-      "source": "litellm"
+      "source": "patch"
     },
     "claude-sonnet-5": {
       "provider": "anthropic",
@@ -18956,6 +18957,24 @@
       },
       "source": "litellm"
     },
+    "gemini-3.1-pro": {
+      "provider": "gemini",
+      "platform": "gemini",
+      "mode": "chat",
+      "capabilities": {
+        "function_calling": true,
+        "vision": true,
+        "prompt_caching": true,
+        "response_schema": true,
+        "web_search": true
+      },
+      "input_cost_per_token": 0.000002,
+      "output_cost_per_token": 0.000012,
+      "cache_read_input_token_cost": 2e-7,
+      "max_input_tokens": 1048576,
+      "max_output_tokens": 65536,
+      "source": "patch"
+    },
     "gemini-3.1-pro-preview": {
       "provider": "vertex_ai-language-models",
       "platform": "gemini",
@@ -23740,6 +23759,18 @@
         "pdf_input": true
       },
       "source": "litellm"
+    },
+    "gpt-oss-120b": {
+      "provider": "openai",
+      "platform": "openai",
+      "mode": "chat",
+      "capabilities": {
+        "function_calling": true,
+        "response_schema": true
+      },
+      "max_input_tokens": 131072,
+      "max_output_tokens": 131072,
+      "source": "patch"
     },
     "gpt-realtime": {
       "provider": "openai",
@@ -41714,111 +41745,111 @@
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.01,
-      "output_cost_per_token": 0.01,
+      "input_cost_per_token": 1e-8,
+      "output_cost_per_token": 1e-8,
       "max_input_tokens": 262144,
       "max_output_tokens": 262144,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/Qwen/Qwen3-235B-A22B-Thinking-2507": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.01,
-      "output_cost_per_token": 0.01,
+      "input_cost_per_token": 1e-8,
+      "output_cost_per_token": 1e-8,
       "max_input_tokens": 262144,
       "max_output_tokens": 262144,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/Qwen/Qwen3-Coder-480B-A35B-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.1,
-      "output_cost_per_token": 0.15,
+      "input_cost_per_token": 1e-7,
+      "output_cost_per_token": 1.5e-7,
       "max_input_tokens": 262144,
       "max_output_tokens": 262144,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/deepseek-ai/DeepSeek-R1-0528": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.135,
-      "output_cost_per_token": 0.54,
+      "input_cost_per_token": 1.35e-7,
+      "output_cost_per_token": 5.4e-7,
       "max_input_tokens": 161000,
       "max_output_tokens": 161000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/deepseek-ai/DeepSeek-V3-0324": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.114,
-      "output_cost_per_token": 0.275,
+      "input_cost_per_token": 1.14e-7,
+      "output_cost_per_token": 2.75e-7,
       "max_input_tokens": 161000,
       "max_output_tokens": 161000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/deepseek-ai/DeepSeek-V3.1": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.055,
-      "output_cost_per_token": 0.165,
+      "input_cost_per_token": 5.5e-8,
+      "output_cost_per_token": 1.65e-7,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/meta-llama/Llama-3.1-8B-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.022,
-      "output_cost_per_token": 0.022,
+      "input_cost_per_token": 2.2e-8,
+      "output_cost_per_token": 2.2e-8,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/meta-llama/Llama-3.3-70B-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.071,
-      "output_cost_per_token": 0.071,
+      "input_cost_per_token": 7.1e-8,
+      "output_cost_per_token": 7.1e-8,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.017,
-      "output_cost_per_token": 0.066,
+      "input_cost_per_token": 1.7e-8,
+      "output_cost_per_token": 6.6e-8,
       "max_input_tokens": 64000,
       "max_output_tokens": 64000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/microsoft/Phi-4-mini-instruct": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.008,
-      "output_cost_per_token": 0.035,
+      "input_cost_per_token": 8e-9,
+      "output_cost_per_token": 3.5e-8,
       "max_input_tokens": 128000,
       "max_output_tokens": 128000,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/moonshotai/Kimi-K2-Instruct": {
       "provider": "wandb",
@@ -41852,56 +41883,56 @@
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.015,
-      "output_cost_per_token": 0.06,
+      "input_cost_per_token": 1.5e-8,
+      "output_cost_per_token": 6e-8,
       "max_input_tokens": 131072,
       "max_output_tokens": 131072,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/openai/gpt-oss-20b": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.005,
-      "output_cost_per_token": 0.02,
+      "input_cost_per_token": 5e-9,
+      "output_cost_per_token": 2e-8,
       "max_input_tokens": 131072,
       "max_output_tokens": 131072,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "wandb/zai-org/GLM-4.5": {
       "provider": "wandb",
       "platform": "wandb",
       "mode": "chat",
-      "input_cost_per_token": 0.055,
-      "output_cost_per_token": 0.2,
+      "input_cost_per_token": 5.5e-8,
+      "output_cost_per_token": 2e-7,
       "max_input_tokens": 131072,
       "max_output_tokens": 131072,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "watsonx/bigscience/mt0-xxl-13b": {
       "provider": "watsonx",
       "platform": "watsonx",
       "mode": "chat",
-      "input_cost_per_token": 0.0005,
-      "output_cost_per_token": 0.002,
+      "input_cost_per_token": 5e-7,
+      "output_cost_per_token": 0.000002,
       "max_input_tokens": 8192,
       "max_output_tokens": 8192,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "watsonx/core42/jais-13b-chat": {
       "provider": "watsonx",
       "platform": "watsonx",
       "mode": "chat",
-      "input_cost_per_token": 0.0005,
-      "output_cost_per_token": 0.002,
+      "input_cost_per_token": 5e-7,
+      "output_cost_per_token": 0.000002,
       "max_input_tokens": 8192,
       "max_output_tokens": 8192,
       "capabilities": {},
-      "source": "litellm"
+      "source": "patch"
     },
     "watsonx/google/flan-t5-xl-3b": {
       "provider": "watsonx",
