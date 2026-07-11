@@ -1,5 +1,5 @@
 {
-  "version": "ea386576b9c8",
+  "version": "2d2dbcdac123",
   "generated_at": "2026-07-11T13:07:11.834Z",
   "upstream": {
     "source": "litellm",
@@ -9881,10 +9881,9 @@
         "response_schema": true,
         "tool_choice": true,
         "pdf_input": true,
-        "computer_use": true,
-        "assistant_prefill": false
+        "computer_use": true
       },
-      "source": "patch"
+      "source": "litellm"
     },
     "claude-haiku-4-5": {
       "provider": "anthropic",
@@ -10226,7 +10225,7 @@
         "computer_use": true,
         "assistant_prefill": true
       },
-      "source": "patch"
+      "source": "litellm"
     },
     "claude-sonnet-4-5-20250929": {
       "provider": "anthropic",
