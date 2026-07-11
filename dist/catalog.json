@@ -1,5 +1,5 @@
 {
-  "version": "2d2dbcdac123",
+  "version": "b0b86598980d",
   "generated_at": "2026-07-11T13:07:11.834Z",
   "upstream": {
     "source": "litellm",
@@ -43321,35 +43321,40 @@
   },
   "clients": {
     "claude-code": {
-      "description": "Model ids accepted by Anthropic's Claude Code CLI (the --model flag / settings). LiteLLM does not track client-level acceptance; this is maintained by observation of the CLI.",
+      "description": "Model ids accepted by Anthropic's Claude Code CLI on the Anthropic API (the --model flag / settings). Source: Claude Code model configuration docs plus Anthropic's current and legacy Claude model overview; provider-specific Bedrock/Vertex/Foundry ids are intentionally excluded.",
       "homepage": "https://code.claude.com",
-      "updated": "2026-06-11",
+      "updated": "2026-07-11",
       "models": [
         "claude-fable-5",
         "claude-haiku-4-5-20251001",
+        "claude-opus-4-1-20250805",
+        "claude-opus-4-5-20251101",
         "claude-opus-4-6",
         "claude-opus-4-7",
         "claude-opus-4-8",
         "claude-sonnet-4-5-20250929",
-        "claude-sonnet-4-6"
+        "claude-sonnet-4-6",
+        "claude-sonnet-5"
       ]
     },
     "codex": {
-      "description": "Model ids accepted by OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is a separate endpoint from the general OpenAI API — pro/nano/other API-only variants are not accessible here. Source: codex-rs/models-manager/models.json in the openai/codex repo.",
+      "description": "User-selectable model ids accepted by OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is a separate endpoint from the general OpenAI API. Source: codex-rs/models-manager/models.json in the openai/codex repo; internal-only codex-auto-review is intentionally omitted.",
       "homepage": "https://github.com/openai/codex",
-      "updated": "2026-05-31",
+      "updated": "2026-07-11",
       "models": [
         "gpt-5.2",
-        "gpt-5.3-codex",
         "gpt-5.4",
         "gpt-5.4-mini",
-        "gpt-5.5"
+        "gpt-5.5",
+        "gpt-5.6-luna",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra"
       ]
     },
     "antigravity": {
-      "description": "Model ids accepted by Google's Antigravity CLI (command: agy), announced at Google I/O 2026 as the successor to Gemini CLI (sunsets 2026-06-18). Supports multi-provider models. Maintained by observation of the CLI.",
+      "description": "Model ids accepted by Google's Antigravity CLI (command: agy). Supports multi-provider models. Source: antigravity.google official site/docs bundle; only models with catalog pricing/context data are included.",
       "homepage": "https://antigravity.google",
-      "updated": "2026-05-31",
+      "updated": "2026-07-11",
       "models": [
         "claude-opus-4-6",
         "claude-sonnet-4-6",

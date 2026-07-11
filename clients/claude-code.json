@@ -1,15 +1,18 @@
 {
   "client": "claude-code",
-  "description": "Model ids accepted by Anthropic's Claude Code CLI (the --model flag / settings). LiteLLM does not track client-level acceptance; this is maintained by observation of the CLI.",
+  "description": "Model ids accepted by Anthropic's Claude Code CLI on the Anthropic API (the --model flag / settings). Source: Claude Code model configuration docs plus Anthropic's current and legacy Claude model overview; provider-specific Bedrock/Vertex/Foundry ids are intentionally excluded.",
   "homepage": "https://code.claude.com",
-  "updated": "2026-06-11",
+  "updated": "2026-07-11",
   "models": [
     "claude-fable-5",
     "claude-haiku-4-5-20251001",
+    "claude-opus-4-1-20250805",
+    "claude-opus-4-5-20251101",
     "claude-opus-4-6",
     "claude-opus-4-7",
     "claude-opus-4-8",
     "claude-sonnet-4-5-20250929",
-    "claude-sonnet-4-6"
+    "claude-sonnet-4-6",
+    "claude-sonnet-5"
   ]
 }

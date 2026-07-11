@@ -1,8 +1,8 @@
 {
   "client": "antigravity",
-  "description": "Model ids accepted by Google's Antigravity CLI (command: agy), announced at Google I/O 2026 as the successor to Gemini CLI (sunsets 2026-06-18). Supports multi-provider models. Maintained by observation of the CLI.",
+  "description": "Model ids accepted by Google's Antigravity CLI (command: agy). Supports multi-provider models. Source: antigravity.google official site/docs bundle; only models with catalog pricing/context data are included.",
   "homepage": "https://antigravity.google",
-  "updated": "2026-05-31",
+  "updated": "2026-07-11",
   "models": [
     "claude-opus-4-6",
     "claude-sonnet-4-6",

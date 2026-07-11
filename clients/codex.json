@@ -1,11 +1,13 @@
 {
   "client": "codex",
-  "description": "Model ids accepted by OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is a separate endpoint from the general OpenAI API — pro/nano/other API-only variants are not accessible here. Source: codex-rs/models-manager/models.json in the openai/codex repo.",
+  "description": "User-selectable model ids accepted by OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is a separate endpoint from the general OpenAI API. Source: codex-rs/models-manager/models.json in the openai/codex repo; internal-only codex-auto-review is intentionally omitted.",
   "homepage": "https://github.com/openai/codex",
-  "updated": "2026-05-31",
+  "updated": "2026-07-11",
   "models": [
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-5.6-luna",
     "gpt-5.2",
-    "gpt-5.3-codex",
     "gpt-5.4",
     "gpt-5.4-mini",
     "gpt-5.5"
