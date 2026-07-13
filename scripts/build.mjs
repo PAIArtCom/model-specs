@@ -162,7 +162,7 @@ async function main() {
 
   // Clients.
   const clients = {};
-  for (const name of ['claude-code', 'codex', 'antigravity']) {
+  for (const name of ['claude-code', 'codex', 'antigravity', 'google-flow']) {
     const c = await readJson(`clients/${name}.json`);
     clients[c.client] = {
       description: c.description,

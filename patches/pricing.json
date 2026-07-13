@@ -21,6 +21,50 @@
     "_note": "Standard tier pricing (prompt ≤ 200K tokens). Source: https://ai.google.dev/gemini-api/docs/pricing (2026-05-31)"
   },
 
+  "gemini-3.1-flash-lite-image": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "image_generation",
+    "input_cost_per_token": 0.00000025,
+    "output_cost_per_token": 0.00003,
+    "output_cost_per_image": 0.0336,
+    "_note": "Paid Standard pricing: $0.25/M text/image/video input tokens, $1.50/M text/thinking output tokens, and $30/M image output tokens; Google publishes the 1K image equivalent as $0.0336. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+  },
+
+  "gemini-omni-flash-preview": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "video_generation",
+    "input_cost_per_token": 0.0000015,
+    "output_cost_per_token": 0.0000175,
+    "output_cost_per_second": 0.10136,
+    "_note": "Paid Standard pricing: $1.50/M input tokens, $9/M text output tokens, and $17.50/M video output tokens. Video output is billed at 5,792 tokens/s for 720p, yielding $0.10136/s. This preview model's availability may vary. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+  },
+
+  "veo-3.1-generate-001": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "video_generation",
+    "output_cost_per_second": 0.4,
+    "_note": "Veo 3.1 Standard default video-with-audio price: $0.40/s at 720p and 1080p. 4K is $0.60/s and is not represented by this single default-rate field. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+  },
+
+  "veo-3.1-fast-generate-001": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "video_generation",
+    "output_cost_per_second": 0.1,
+    "_note": "Veo 3.1 Fast default video-with-audio price: $0.10/s at 720p. 1080p is $0.12/s and 4K is $0.30/s; this single field records the default 720p rate. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+  },
+
+  "veo-3.1-lite-generate-preview": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "video_generation",
+    "output_cost_per_second": 0.05,
+    "_note": "Veo 3.1 Lite default video-with-audio price: $0.05/s at 720p; 1080p is $0.08/s and 4K is unsupported. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+  },
+
   "gpt-oss-120b": {
     "provider": "openai",
     "platform": "openai",

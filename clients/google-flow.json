@@ -1,0 +1,16 @@
+{
+  "client": "google-flow",
+  "description": "Model ids represented by Google Flow's web-based AI filmmaking and image-generation client. Includes the Nano Banana image family (legacy, current, Pro, and Lite) and the Veo 3.1 and Gemini Omni Flash video families. Availability varies by region, Google AI subscription tier, and staged rollout; this is not the complete Gemini API or Vertex AI catalog. Source: Google Flow and Gemini API documentation. Imagen models are intentionally excluded because Google has announced their shutdown on 2026-08-17.",
+  "homepage": "https://labs.google/fx/tools/flow",
+  "updated": "2026-07-14",
+  "models": [
+    "gemini-2.5-flash-image",
+    "gemini-3-pro-image",
+    "gemini-3.1-flash-image",
+    "gemini-3.1-flash-lite-image",
+    "gemini-omni-flash-preview",
+    "veo-3.1-fast-generate-001",
+    "veo-3.1-generate-001",
+    "veo-3.1-lite-generate-preview"
+  ]
+}

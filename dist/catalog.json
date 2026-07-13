@@ -1,5 +1,5 @@
 {
-  "version": "b0b86598980d",
+  "version": "cf417860dbf0",
   "generated_at": "2026-07-11T13:07:11.834Z",
   "upstream": {
     "source": "litellm",
@@ -18910,6 +18910,16 @@
       },
       "source": "litellm"
     },
+    "gemini-3.1-flash-lite-image": {
+      "provider": "gemini",
+      "platform": "gemini",
+      "mode": "image_generation",
+      "capabilities": {},
+      "input_cost_per_token": 2.5e-7,
+      "output_cost_per_token": 0.00003,
+      "output_cost_per_image": 0.0336,
+      "source": "patch"
+    },
     "gemini-3.1-flash-lite-preview": {
       "provider": "vertex_ai-language-models",
       "platform": "gemini",
@@ -19221,6 +19231,16 @@
         "pdf_input": true
       },
       "source": "litellm"
+    },
+    "gemini-omni-flash-preview": {
+      "provider": "gemini",
+      "platform": "gemini",
+      "mode": "video_generation",
+      "capabilities": {},
+      "input_cost_per_token": 0.0000015,
+      "output_cost_per_token": 0.0000175,
+      "output_cost_per_second": 0.10136,
+      "source": "patch"
     },
     "gemini-pro-latest": {
       "provider": "gemini",
@@ -37952,6 +37972,30 @@
       },
       "source": "litellm"
     },
+    "veo-3.1-fast-generate-001": {
+      "provider": "gemini",
+      "platform": "gemini",
+      "mode": "video_generation",
+      "capabilities": {},
+      "output_cost_per_second": 0.1,
+      "source": "patch"
+    },
+    "veo-3.1-generate-001": {
+      "provider": "gemini",
+      "platform": "gemini",
+      "mode": "video_generation",
+      "capabilities": {},
+      "output_cost_per_second": 0.4,
+      "source": "patch"
+    },
+    "veo-3.1-lite-generate-preview": {
+      "provider": "gemini",
+      "platform": "gemini",
+      "mode": "video_generation",
+      "capabilities": {},
+      "output_cost_per_second": 0.05,
+      "source": "patch"
+    },
     "vercel_ai_gateway/alibaba/qwen-3-14b": {
       "provider": "vercel_ai_gateway",
       "platform": "vercel_ai_gateway",
@@ -43361,6 +43405,21 @@
         "gemini-3.1-pro",
         "gemini-3.5-flash",
         "gpt-oss-120b"
+      ]
+    },
+    "google-flow": {
+      "description": "Model ids represented by Google Flow's web-based AI filmmaking and image-generation client. Includes the Nano Banana image family (legacy, current, Pro, and Lite) and the Veo 3.1 and Gemini Omni Flash video families. Availability varies by region, Google AI subscription tier, and staged rollout; this is not the complete Gemini API or Vertex AI catalog. Source: Google Flow and Gemini API documentation. Imagen models are intentionally excluded because Google has announced their shutdown on 2026-08-17.",
+      "homepage": "https://labs.google/fx/tools/flow",
+      "updated": "2026-07-14",
+      "models": [
+        "gemini-2.5-flash-image",
+        "gemini-3-pro-image",
+        "gemini-3.1-flash-image",
+        "gemini-3.1-flash-lite-image",
+        "gemini-omni-flash-preview",
+        "veo-3.1-fast-generate-001",
+        "veo-3.1-generate-001",
+        "veo-3.1-lite-generate-preview"
       ]
     }
   }
