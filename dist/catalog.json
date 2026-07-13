@@ -1,5 +1,5 @@
 {
-  "version": "cf417860dbf0",
+  "version": "d3a13d919902",
   "generated_at": "2026-07-11T13:07:11.834Z",
   "upstream": {
     "source": "litellm",
@@ -43412,7 +43412,6 @@
       "homepage": "https://labs.google/fx/tools/flow",
       "updated": "2026-07-14",
       "models": [
-        "gemini-2.5-flash-image",
         "gemini-3-pro-image",
         "gemini-3.1-flash-image",
         "gemini-3.1-flash-lite-image",
