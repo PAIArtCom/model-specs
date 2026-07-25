@@ -1,8 +1,8 @@
 {
   "client": "codex",
-  "description": "User-selectable model ids accepted by OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is a separate endpoint from the general OpenAI API. Source: codex-rs/models-manager/models.json in the openai/codex repo; internal-only codex-auto-review is intentionally omitted.",
+  "description": "User-selectable model ids accepted by OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is a separate endpoint from the general OpenAI API. Source: codex-rs/models-manager/models.json in the openai/codex repo; internal-only codex-auto-review is intentionally omitted. gpt-5.4 and gpt-5.4-mini moved to visibility \"hide\" on 2026-07-14 (\"Migrate GPT-5.4 uses to GPT-5.6 variants\") — still accepted when named explicitly, but no longer offered in the model picker.",
   "homepage": "https://github.com/openai/codex",
-  "updated": "2026-07-11",
+  "updated": "2026-07-25",
   "models": [
     "gpt-5.6-sol",
     "gpt-5.6-terra",

@@ -65,6 +65,20 @@
     "_note": "Veo 3.1 Lite default video-with-audio price: $0.05/s at 720p; 1080p is $0.08/s and 4K is unsupported. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
   },
 
+  "claude-mythos-5": {
+    "provider": "anthropic",
+    "platform": "anthropic",
+    "mode": "chat",
+    "input_cost_per_token": 1e-5,
+    "output_cost_per_token": 5e-5,
+    "cache_read_input_token_cost": 1e-6,
+    "cache_creation_input_token_cost": 1.25e-5,
+    "cache_creation_input_token_cost_above_1hr": 2e-5,
+    "max_input_tokens": 1000000,
+    "max_output_tokens": 128000,
+    "_note": "Claude Mythos 5 shares Claude Fable 5's specs and pricing ($10/$50 per MTok, 1M context, 128K output) but is not in LiteLLM upstream because it is not generally available — access is invitation-only through Project Glasswing. Cache rates mirror the published Fable 5 tier. Source: https://platform.claude.com/docs/en/about-claude/models/overview (2026-07-25)"
+  },
+
   "gpt-oss-120b": {
     "provider": "openai",
     "platform": "openai",
