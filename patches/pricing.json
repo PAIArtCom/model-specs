@@ -65,6 +65,8 @@
     "_note": "Veo 3.1 Lite default video-with-audio price: $0.05/s at 720p; 1080p is $0.08/s and 4K is unsupported. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
   },
 
+  "_claude_sonnet_5_intro_pricing_note": "claude-sonnet-5 carries LiteLLM's $2/$10 per MTok, which is Anthropic's introductory rate and expires 2026-08-31. The list price is $3/$15 per MTok, with cache read $0.30/MTok and 5m/1h cache write $3.75/$6.00 per MTok. Left unpatched on purpose: until 2026-08-31 the upstream values are what customers are actually billed. On or after 2026-09-01, re-check upstream — if LiteLLM has not moved to list price, add a claude-sonnet-5 entry here with input_cost_per_token 3e-6, output_cost_per_token 1.5e-5, cache_read_input_token_cost 3e-7, cache_creation_input_token_cost 3.75e-6, cache_creation_input_token_cost_above_1hr 6e-6. Source: https://platform.claude.com/docs/en/about-claude/pricing#claude-sonnet-5-introductory-pricing (2026-07-25)",
+
   "claude-mythos-5": {
     "provider": "anthropic",
     "platform": "anthropic",
