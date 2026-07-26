@@ -93,6 +93,11 @@ npm install   # first time only — installs ajv for validate
 3. Run `npm run build && npm run validate` and open a PR. CI rebuilds `dist/` and
    fails on schema or invariant violations.
 
+**[`AGENTS.md`](AGENTS.md) is the full data update guide** — per-task recipes,
+the authoritative source for each client's model list, the pre-commit checklist,
+and the calendar of upcoming deprecations. Read it before changing any data file.
+(`CLAUDE.md` imports it, so Claude Code loads it automatically.)
+
 ## License
 
 MIT. The data under `upstream/litellm/` is mirrored from
