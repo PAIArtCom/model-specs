@@ -131,6 +131,7 @@ when they lapse — the data just goes quietly wrong. Known dates:
 |---|---|
 | 2026-08-05 | `claude-opus-4-1-20250805` retires — drop from `clients/claude-code.json` |
 | 2026-08-17 | Imagen models shut down (already excluded from `clients/google-flow.json`) |
+| 2026-08-31 | `gpt-5.4` and `gpt-5.4-mini` retire from the ChatGPT OAuth path — drop from `clients/codex.json` |
 | 2026-08-31 | Claude Sonnet 5 introductory pricing ends — see the note in `patches/pricing.json` |
 
 When you learn a future date, add a row here in the same commit.
