@@ -1,12 +1,12 @@
 {
   "client": "claude-code",
-  "description": "Model ids accepted by Anthropic's Claude Code CLI on the Anthropic API (the --model flag / settings). Source: Claude Code model configuration docs plus Anthropic's current and legacy Claude model overview; provider-specific Bedrock/Vertex/Foundry ids are intentionally excluded. Newer models carry a minimum CLI version (Opus 5 needs v2.1.219+, Sonnet 5 v2.1.197+, Fable 5 v2.1.170+). claude-mythos-5 is excluded: it is invitation-only via Project Glasswing and is not offered in the model picker.",
+  "description": "Model ids accepted by Anthropic's Claude Code CLI on the Anthropic API (the --model flag / settings). Source: Claude Code model configuration docs plus Anthropic's current and legacy Claude model overview; provider-specific Bedrock/Vertex/Foundry ids are intentionally excluded. Newer models carry a minimum CLI version (Fable 5.1 needs v2.1.255+, Opus 5 v2.1.219+, Sonnet 5 v2.1.197+, Fable 5 v2.1.170+). Claude Mythos models are excluded because they require invitation-only Project Glasswing access and are not offered in the normal model picker.",
   "homepage": "https://code.claude.com",
-  "updated": "2026-07-25",
+  "updated": "2026-09-04",
   "models": [
     "claude-fable-5",
+    "claude-fable-5-1",
     "claude-haiku-4-5-20251001",
-    "claude-opus-4-1-20250805",
     "claude-opus-4-5-20251101",
     "claude-opus-4-6",
     "claude-opus-4-7",

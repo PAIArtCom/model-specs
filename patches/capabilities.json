@@ -1,5 +1,5 @@
 {
-  "_doc": "Objective corrections to capability flags when LiteLLM is wrong or missing. Keyed by model id; shallow-merged into that model's `capabilities` object and flips `source` to `patch`. Recognized flags: function_calling, vision, prompt_caching, reasoning, response_schema, audio_input, audio_output, web_search, tool_choice, system_messages, parallel_function_calling, pdf_input, computer_use, native_structured_output, video_input, assistant_prefill, code_execution.",
+  "_doc": "Objective corrections to capability flags when LiteLLM is wrong or missing. Keyed by model id; shallow-merged into that model's `capabilities` object and flips `source` to `patch`. Recognized flags: function_calling, vision, prompt_caching, reasoning, response_schema, audio_input, audio_output, web_search, tool_choice, system_messages, parallel_function_calling, pdf_input, computer_use, native_structured_output, video_input, assistant_prefill, code_execution, tool_search, legacy_thinking, thinking_always_on, forced_tool_use, prompt_cache_breakpoint.",
 
   "_example_remove_underscore_to_use": {
     "function_calling": true,
@@ -11,19 +11,7 @@
 
   "claude-sonnet-4-6": {
     "assistant_prefill": false,
-    "_note": "LiteLLM upstream incorrectly sets supports_assistant_prefill=true. Anthropic docs confirm prefill is not supported on any Claude 4.6+ model."
-  },
-
-  "claude-mythos-5": {
-    "function_calling": true,
-    "vision": true,
-    "prompt_caching": true,
-    "reasoning": true,
-    "response_schema": true,
-    "tool_choice": true,
-    "pdf_input": true,
-    "computer_use": true,
-    "_note": "Mirrors the claude-fable-5 capability set, which Mythos 5 shares. Assistant prefill is not supported (Claude 4.6+ behavior) so the flag is intentionally absent. Source: https://platform.claude.com/docs/en/about-claude/models/overview (2026-07-25)"
+    "_note": "LiteLLM upstream incorrectly sets supports_assistant_prefill=true. Anthropic docs confirm prefill is not supported on any Claude 4.6+ model. Source: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices (2026-09-04)"
   },
 
   "gemini-3.1-pro": {

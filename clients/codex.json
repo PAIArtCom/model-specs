@@ -1,17 +1,16 @@
 {
   "client": "codex",
-  "description": "User-selectable model ids available to ordinary users of OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is separate from the general OpenAI API. Picker metadata comes from codex-rs/models-manager/models.json in the openai/codex repo; visibility \"list\" models are offered in the picker, while visibility \"hide\" models remain available when named explicitly. Official OpenAI documentation also accepts gpt-5.6 as the generic GPT-5.6 id and documents gpt-5.3-codex-spark, which is served to eligible accounts despite not appearing in models.json. Models requiring separate approval and provisioning, including gpt-daybreak-blue-latest and gpt-daybreak-red-latest, are excluded, as is internal-only codex-auto-review. gpt-5.4 and gpt-5.4-mini retire from the ChatGPT OAuth path on 2026-08-31.",
+  "description": "User-selectable model ids available through OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is separate from the general OpenAI API. Picker metadata comes from codex-rs/models-manager/models.json in the openai/codex repo; visibility \"list\" models are offered in the picker, while visibility \"hide\" models may remain available when named explicitly. GPT-6 Astra requires Codex 0.153.0 or newer and is included during its staged rollout across eligible ChatGPT plans. Official OpenAI documentation also accepts gpt-5.6 as the generic GPT-5.6 id and documents gpt-5.3-codex-spark, which is served to eligible accounts despite not appearing in models.json. Models requiring separate approval and provisioning, including gpt-daybreak-blue-latest and gpt-daybreak-red-latest, are excluded, as is internal-only codex-auto-review.",
   "homepage": "https://github.com/openai/codex",
-  "updated": "2026-08-30",
+  "updated": "2026-09-04",
   "models": [
+    "gpt-6-astra",
     "gpt-5.6",
     "gpt-5.6-sol",
     "gpt-5.6-terra",
     "gpt-5.6-luna",
     "gpt-5.3-codex-spark",
     "gpt-5.2",
-    "gpt-5.4",
-    "gpt-5.4-mini",
     "gpt-5.5"
   ]
 }

@@ -39,6 +39,11 @@ const CAP_MAP = {
   supports_video_input: 'video_input',
   supports_assistant_prefill: 'assistant_prefill',
   supports_code_execution: 'code_execution',
+  supports_tool_search: 'tool_search',
+  supports_legacy_thinking: 'legacy_thinking',
+  thinking_always_on: 'thinking_always_on',
+  supports_forced_tool_use: 'forced_tool_use',
+  supports_prompt_cache_breakpoint: 'prompt_cache_breakpoint',
 };
 
 function resolvePlatform(modelId, provider, providers) {
@@ -69,6 +74,11 @@ function normalizeModel(modelId, raw, providers) {
   // numCost: preserves 0 (explicitly free/local models) — use for all pricing fields.
   // numPositive: requires > 0 — use for limits and sizes where 0 is meaningless.
   const numCost = (v) => (typeof v === 'number' && v >= 0 ? v : undefined);
+  const costMap = (v) => {
+    if (!v || typeof v !== 'object' || Array.isArray(v)) return undefined;
+    const entries = Object.entries(v).filter(([, cost]) => typeof cost === 'number' && cost >= 0);
+    return entries.length ? Object.fromEntries(entries) : undefined;
+  };
   const numPositive = (v) => (typeof v === 'number' && v > 0 ? v : undefined);
   const model = {
     provider,
@@ -80,13 +90,22 @@ function normalizeModel(modelId, raw, providers) {
     cache_read_input_token_cost: numCost(raw.cache_read_input_token_cost),
     cache_creation_input_token_cost: numCost(raw.cache_creation_input_token_cost),
     cache_creation_input_token_cost_above_1hr: numCost(raw.cache_creation_input_token_cost_above_1hr),
+    cache_read_input_token_cost_flex: numCost(raw.cache_read_input_token_cost_flex),
+    cache_creation_input_token_cost_flex: numCost(raw.cache_creation_input_token_cost_flex),
+    cache_read_input_token_cost_priority: numCost(raw.cache_read_input_token_cost_priority),
+    cache_creation_input_token_cost_priority: numCost(raw.cache_creation_input_token_cost_priority),
     input_cost_per_audio_token: numCost(raw.input_cost_per_audio_token),
+    output_cost_per_image_token: numCost(raw.output_cost_per_image_token),
+    output_cost_per_video_token: numCost(raw.output_cost_per_video_token),
     output_cost_per_reasoning_token: numCost(raw.output_cost_per_reasoning_token),
     // Non-token pricing (TTS → per character, STT → per second, rerank → per query)
     input_cost_per_character: numCost(raw.input_cost_per_character),
     output_cost_per_character: numCost(raw.output_cost_per_character),
     input_cost_per_second: numCost(raw.input_cost_per_second),
     output_cost_per_second: numCost(raw.output_cost_per_second),
+    output_cost_per_second_480p: numCost(raw.output_cost_per_second_480p),
+    output_cost_per_second_1080p: numCost(raw.output_cost_per_second_1080p),
+    output_cost_per_second_4k: numCost(raw.output_cost_per_second_4k),
     input_cost_per_query: numCost(raw.input_cost_per_query),
     // Extended token pricing (batch, priority, flex tiers)
     output_cost_per_audio_token: numCost(raw.output_cost_per_audio_token),
@@ -109,6 +128,21 @@ function normalizeModel(modelId, raw, providers) {
     input_cost_per_token_above_272k_tokens: numCost(raw.input_cost_per_token_above_272k_tokens),
     output_cost_per_token_above_272k_tokens: numCost(raw.output_cost_per_token_above_272k_tokens),
     cache_read_input_token_cost_above_272k_tokens: numCost(raw.cache_read_input_token_cost_above_272k_tokens),
+    cache_creation_input_token_cost_above_272k_tokens: numCost(raw.cache_creation_input_token_cost_above_272k_tokens),
+    input_cost_per_token_above_272k_tokens_flex: numCost(raw.input_cost_per_token_above_272k_tokens_flex),
+    output_cost_per_token_above_272k_tokens_flex: numCost(raw.output_cost_per_token_above_272k_tokens_flex),
+    cache_read_input_token_cost_above_272k_tokens_flex: numCost(raw.cache_read_input_token_cost_above_272k_tokens_flex),
+    cache_creation_input_token_cost_above_272k_tokens_flex: numCost(raw.cache_creation_input_token_cost_above_272k_tokens_flex),
+    input_cost_per_token_above_272k_tokens_priority: numCost(raw.input_cost_per_token_above_272k_tokens_priority),
+    output_cost_per_token_above_272k_tokens_priority: numCost(raw.output_cost_per_token_above_272k_tokens_priority),
+    cache_read_input_token_cost_above_272k_tokens_priority: numCost(raw.cache_read_input_token_cost_above_272k_tokens_priority),
+    cache_creation_input_token_cost_above_272k_tokens_priority: numCost(raw.cache_creation_input_token_cost_above_272k_tokens_priority),
+    google_maps_grounding_cost_per_query: numCost(raw.google_maps_grounding_cost_per_query),
+    search_context_cost_per_query: costMap(raw.search_context_cost_per_query),
+    guardrail_cost_per_unit: costMap(raw.guardrail_cost_per_unit),
+    regional_endpoint_uplift_multiplier: numCost(raw.regional_endpoint_uplift_multiplier),
+    regional_processing_uplift_multiplier_eu: numCost(raw.regional_processing_uplift_multiplier_eu),
+    regional_processing_uplift_multiplier_us: numCost(raw.regional_processing_uplift_multiplier_us),
     // Rate limits
     rpm: (Number.isInteger(raw.rpm) && raw.rpm > 0) ? raw.rpm : undefined,
     tpm: (Number.isInteger(raw.tpm) && raw.tpm > 0) ? raw.tpm : undefined,

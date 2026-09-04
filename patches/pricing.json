@@ -26,9 +26,8 @@
     "platform": "gemini",
     "mode": "image_generation",
     "input_cost_per_token": 0.00000025,
-    "output_cost_per_token": 0.00003,
     "output_cost_per_image": 0.0336,
-    "_note": "Paid Standard pricing: $0.25/M text/image/video input tokens, $1.50/M text/thinking output tokens, and $30/M image output tokens; Google publishes the 1K image equivalent as $0.0336. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+    "_note": "Paid Standard pricing: $0.25/M text/image/video input tokens, $1.50/M text/thinking output tokens, and $30/M image output tokens; Google publishes the 1K image equivalent as $0.0336. The distinct image-token rate comes from LiteLLM's output_cost_per_image_token field. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
   "gemini-omni-flash-preview": {
@@ -36,9 +35,8 @@
     "platform": "gemini",
     "mode": "video_generation",
     "input_cost_per_token": 0.0000015,
-    "output_cost_per_token": 0.0000175,
     "output_cost_per_second": 0.10136,
-    "_note": "Paid Standard pricing: $1.50/M input tokens, $9/M text output tokens, and $17.50/M video output tokens. Video output is billed at 5,792 tokens/s for 720p, yielding $0.10136/s. This preview model's availability may vary. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+    "_note": "Paid Standard pricing: $1.50/M input tokens, $9/M text output tokens, and $17.50/M video output tokens. The text and video rates remain distinct in output_cost_per_token and output_cost_per_video_token; video output is billed at 5,792 tokens/s for 720p, yielding $0.10136/s. This preview model retires on 2026-09-30. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
   "veo-3.1-generate-001": {
@@ -46,7 +44,9 @@
     "platform": "gemini",
     "mode": "video_generation",
     "output_cost_per_second": 0.4,
-    "_note": "Veo 3.1 Standard default video-with-audio price: $0.40/s at 720p and 1080p. 4K is $0.60/s and is not represented by this single default-rate field. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+    "output_cost_per_second_1080p": 0.4,
+    "output_cost_per_second_4k": 0.6,
+    "_note": "Veo 3.1 Standard video-with-audio pricing: $0.40/s at 720p and 1080p, and $0.60/s at 4K. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
   "veo-3.1-fast-generate-001": {
@@ -54,7 +54,9 @@
     "platform": "gemini",
     "mode": "video_generation",
     "output_cost_per_second": 0.1,
-    "_note": "Veo 3.1 Fast default video-with-audio price: $0.10/s at 720p. 1080p is $0.12/s and 4K is $0.30/s; this single field records the default 720p rate. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
+    "output_cost_per_second_1080p": 0.12,
+    "output_cost_per_second_4k": 0.3,
+    "_note": "Veo 3.1 Fast video-with-audio pricing: $0.10/s at 720p, $0.12/s at 1080p, and $0.30/s at 4K. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
   "veo-3.1-lite-generate-preview": {
@@ -62,23 +64,8 @@
     "platform": "gemini",
     "mode": "video_generation",
     "output_cost_per_second": 0.05,
-    "_note": "Veo 3.1 Lite default video-with-audio price: $0.05/s at 720p; 1080p is $0.08/s and 4K is unsupported. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-07-14)"
-  },
-
-  "_claude_sonnet_5_intro_pricing_note": "claude-sonnet-5 carries LiteLLM's $2/$10 per MTok, which is Anthropic's introductory rate and expires 2026-08-31. The list price is $3/$15 per MTok, with cache read $0.30/MTok and 5m/1h cache write $3.75/$6.00 per MTok. Left unpatched on purpose: until 2026-08-31 the upstream values are what customers are actually billed. On or after 2026-09-01, re-check upstream — if LiteLLM has not moved to list price, add a claude-sonnet-5 entry here with input_cost_per_token 3e-6, output_cost_per_token 1.5e-5, cache_read_input_token_cost 3e-7, cache_creation_input_token_cost 3.75e-6, cache_creation_input_token_cost_above_1hr 6e-6. Source: https://platform.claude.com/docs/en/about-claude/pricing#claude-sonnet-5-introductory-pricing (2026-07-25)",
-
-  "claude-mythos-5": {
-    "provider": "anthropic",
-    "platform": "anthropic",
-    "mode": "chat",
-    "input_cost_per_token": 1e-5,
-    "output_cost_per_token": 5e-5,
-    "cache_read_input_token_cost": 1e-6,
-    "cache_creation_input_token_cost": 1.25e-5,
-    "cache_creation_input_token_cost_above_1hr": 2e-5,
-    "max_input_tokens": 1000000,
-    "max_output_tokens": 128000,
-    "_note": "Claude Mythos 5 shares Claude Fable 5's specs and pricing ($10/$50 per MTok, 1M context, 128K output) but is not in LiteLLM upstream because it is not generally available — access is invitation-only through Project Glasswing. Cache rates mirror the published Fable 5 tier. Source: https://platform.claude.com/docs/en/about-claude/models/overview (2026-07-25)"
+    "output_cost_per_second_1080p": 0.08,
+    "_note": "Veo 3.1 Lite video-with-audio pricing: $0.05/s at 720p and $0.08/s at 1080p; 4K is unsupported. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
   "gpt-oss-120b": {
@@ -108,71 +95,41 @@
     "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x): 0.0005→5e-7, 0.002→2e-6. Official IBM WatsonX: $0.50/M input, $2.00/M output. Source: https://cloudprice.net/models/watsonx/core42/jais-13b-chat (2026-06-01, sourced from IBM docs)"
   },
 
-  "_wandb_unit_error_note": "The following 13 wandb/* entries have LiteLLM upstream data quality bugs: per-million-token prices were stored in the per-token field (off by 1e6). Corrected by dividing the raw value by 1,000,000. Values are plausible inference rates for the wandb.ai platform.",
+  "_wandb_unit_error_note": "The following wandb/* entries still have LiteLLM upstream data quality bugs: per-million-token prices were stored in the per-token field (off by 1e6). Corrected by dividing the raw value by 1,000,000. Entries fixed by LiteLLM are intentionally left to upstream. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)",
 
   "wandb/deepseek-ai/DeepSeek-R1-0528": {
     "input_cost_per_token": 1.35e-7,
     "output_cost_per_token": 5.4e-7,
-    "_note": "Unit error in LiteLLM upstream (per-M stored as per-token). Corrected: 0.135→1.35e-7, 0.54→5.4e-7."
+    "_note": "Unit error in LiteLLM upstream (per-M stored as per-token). Corrected: 0.135→1.35e-7, 0.54→5.4e-7. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   },
   "wandb/deepseek-ai/DeepSeek-V3-0324": {
     "input_cost_per_token": 1.14e-7,
     "output_cost_per_token": 2.75e-7,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.114→1.14e-7, 0.275→2.75e-7."
-  },
-  "wandb/deepseek-ai/DeepSeek-V3.1": {
-    "input_cost_per_token": 5.5e-8,
-    "output_cost_per_token": 1.65e-7,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.165→1.65e-7."
-  },
-  "wandb/meta-llama/Llama-3.1-8B-Instruct": {
-    "input_cost_per_token": 2.2e-8,
-    "output_cost_per_token": 2.2e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.022→2.2e-8."
-  },
-  "wandb/meta-llama/Llama-3.3-70B-Instruct": {
-    "input_cost_per_token": 7.1e-8,
-    "output_cost_per_token": 7.1e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.071→7.1e-8."
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.114→1.14e-7, 0.275→2.75e-7. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   },
   "wandb/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
     "input_cost_per_token": 1.7e-8,
     "output_cost_per_token": 6.6e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.017→1.7e-8, 0.066→6.6e-8."
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.017→1.7e-8, 0.066→6.6e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   },
   "wandb/microsoft/Phi-4-mini-instruct": {
     "input_cost_per_token": 8e-9,
     "output_cost_per_token": 3.5e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.008→8e-9, 0.035→3.5e-8."
-  },
-  "wandb/openai/gpt-oss-120b": {
-    "input_cost_per_token": 1.5e-8,
-    "output_cost_per_token": 6e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.015→1.5e-8, 0.06→6e-8."
-  },
-  "wandb/openai/gpt-oss-20b": {
-    "input_cost_per_token": 5e-9,
-    "output_cost_per_token": 2e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.005→5e-9, 0.02→2e-8."
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.008→8e-9, 0.035→3.5e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   },
   "wandb/Qwen/Qwen3-235B-A22B-Instruct-2507": {
     "input_cost_per_token": 1e-8,
     "output_cost_per_token": 1e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8."
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   },
   "wandb/Qwen/Qwen3-235B-A22B-Thinking-2507": {
     "input_cost_per_token": 1e-8,
     "output_cost_per_token": 1e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8."
-  },
-  "wandb/Qwen/Qwen3-Coder-480B-A35B-Instruct": {
-    "input_cost_per_token": 1e-7,
-    "output_cost_per_token": 1.5e-7,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.1→1e-7, 0.15→1.5e-7."
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   },
   "wandb/zai-org/GLM-4.5": {
     "input_cost_per_token": 5.5e-8,
     "output_cost_per_token": 2e-7,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.2→2e-7."
+    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.2→2e-7. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   }
 }

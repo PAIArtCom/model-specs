@@ -44,16 +44,12 @@ function checkSemanticInvariants(catalog, schema) {
   const costKeys = costFieldsFromSchema(schema);
   const tokenCostKeys = costKeys.filter((k) => k.includes('_token'));
   for (const [id, m] of Object.entries(models)) {
-    for (const costKey of costKeys) {
+    for (const costKey of tokenCostKeys) {
       const v = m[costKey];
       if (typeof v !== 'number') continue;
       if (v > 1) {
         fail(`${id}: ${costKey}=${v} > 1 USD/token — likely a per-million vs per-token unit error`);
-      }
-    }
-    for (const costKey of tokenCostKeys) {
-      const v = m[costKey];
-      if (typeof v === 'number' && v > 0.001) {
+      } else if (v > 0.001) {
         warn(`${id}: ${costKey}=${v} > $1,000/M tokens — verify this is not a per-million unit error`);
       }
     }

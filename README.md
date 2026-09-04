@@ -80,7 +80,11 @@ Read `dist/catalog.json`. Two patterns:
 All cost fields are **USD per token** (not per million). `source` on each model is
 `litellm` (verbatim from upstream) or `patch` (corrected here). `platform` is the
 normalized vendor (e.g. all `vertex_ai-anthropic*` → `anthropic`), distinct from
-LiteLLM's finer-grained `provider`.
+LiteLLM's finer-grained `provider`. Specialized services may use a dedicated
+mode such as `guardrail` and expose a named per-unit price map; multimodal models
+keep text, image-token, video-token, and resolution-specific per-second rates in
+separate fields. Regional endpoint or processing uplifts are retained as
+multipliers rather than folded into base prices.
 
 ## Contributing
 
