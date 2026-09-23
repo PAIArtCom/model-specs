@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain Model Catalog"
+  short_description: "Sync and audit model catalog data"
+  default_prompt: "Use $maintain-model-catalog to sync and systematically audit this repository model catalog."
