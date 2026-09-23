@@ -115,6 +115,8 @@ function normalizeModel(modelId, raw, providers) {
     output_cost_per_token_priority: numCost(raw.output_cost_per_token_priority),
     input_cost_per_token_flex: numCost(raw.input_cost_per_token_flex),
     output_cost_per_token_flex: numCost(raw.output_cost_per_token_flex),
+    cache_read_input_token_cost_batches: numCost(raw.cache_read_input_token_cost_batches),
+    cache_creation_input_token_cost_batches: numCost(raw.cache_creation_input_token_cost_batches),
     // Image pricing (per-image flat rate OR per-pixel for resolution-variant models)
     input_cost_per_image: numCost(raw.input_cost_per_image),
     output_cost_per_image: numCost(raw.output_cost_per_image),
@@ -137,12 +139,19 @@ function normalizeModel(modelId, raw, providers) {
     output_cost_per_token_above_272k_tokens_priority: numCost(raw.output_cost_per_token_above_272k_tokens_priority),
     cache_read_input_token_cost_above_272k_tokens_priority: numCost(raw.cache_read_input_token_cost_above_272k_tokens_priority),
     cache_creation_input_token_cost_above_272k_tokens_priority: numCost(raw.cache_creation_input_token_cost_above_272k_tokens_priority),
+    input_cost_per_token_above_272k_tokens_batches: numCost(raw.input_cost_per_token_above_272k_tokens_batches),
+    output_cost_per_token_above_272k_tokens_batches: numCost(raw.output_cost_per_token_above_272k_tokens_batches),
+    cache_read_input_token_cost_above_272k_tokens_batches: numCost(raw.cache_read_input_token_cost_above_272k_tokens_batches),
+    cache_creation_input_token_cost_above_272k_tokens_batches: numCost(raw.cache_creation_input_token_cost_above_272k_tokens_batches),
     google_maps_grounding_cost_per_query: numCost(raw.google_maps_grounding_cost_per_query),
     search_context_cost_per_query: costMap(raw.search_context_cost_per_query),
     guardrail_cost_per_unit: costMap(raw.guardrail_cost_per_unit),
     regional_endpoint_uplift_multiplier: numCost(raw.regional_endpoint_uplift_multiplier),
     regional_processing_uplift_multiplier_eu: numCost(raw.regional_processing_uplift_multiplier_eu),
     regional_processing_uplift_multiplier_us: numCost(raw.regional_processing_uplift_multiplier_us),
+    // Anthropic fast mode: LiteLLM stores the premium as provider_specific_entry.fast,
+    // a multiplier over every token price (cache multipliers stack on top).
+    fast_mode_uplift_multiplier: numCost(raw.provider_specific_entry?.fast),
     // Rate limits
     rpm: (Number.isInteger(raw.rpm) && raw.rpm > 0) ? raw.rpm : undefined,
     tpm: (Number.isInteger(raw.tpm) && raw.tpm > 0) ? raw.tpm : undefined,

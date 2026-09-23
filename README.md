@@ -83,8 +83,10 @@ normalized vendor (e.g. all `vertex_ai-anthropic*` → `anthropic`), distinct fr
 LiteLLM's finer-grained `provider`. Specialized services may use a dedicated
 mode such as `guardrail` and expose a named per-unit price map; multimodal models
 keep text, image-token, video-token, and resolution-specific per-second rates in
-separate fields. Regional endpoint or processing uplifts are retained as
-multipliers rather than folded into base prices.
+separate fields. Regional endpoint or processing uplifts and the fast-mode
+premium (`fast_mode_uplift_multiplier`) are retained as multipliers rather than
+folded into base prices. Batch, flex, and priority tiers carry their own cache
+and long-context rates in suffixed fields (`*_batches`, `*_flex`, `*_priority`).
 
 ## Contributing
 
