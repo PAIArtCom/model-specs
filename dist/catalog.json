@@ -1,5 +1,5 @@
 {
-  "version": "9d654e530ee2",
+  "version": "837282acddc5",
   "generated_at": "2026-09-23T02:14:07.044Z",
   "upstream": {
     "source": "litellm",
@@ -14778,6 +14778,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -14808,6 +14809,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -14888,6 +14890,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -14918,6 +14921,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -14948,6 +14952,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -15038,6 +15043,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -15068,6 +15074,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -15098,6 +15105,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -15127,6 +15135,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -15156,6 +15165,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "fast_mode_uplift_multiplier": 2,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -15186,6 +15196,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "fast_mode_uplift_multiplier": 2,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
@@ -15231,7 +15242,8 @@
         "native_structured_output": true,
         "thinking_always_on": true
       },
-      "source": "litellm"
+      "source": "patch",
+      "regional_processing_uplift_multiplier_us": 1.1
     },
     "claude-sonnet-4-5": {
       "provider": "anthropic",
@@ -15347,6 +15359,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {
@@ -15378,6 +15391,7 @@
         "search_context_size_low": 0.01,
         "search_context_size_medium": 0.01
       },
+      "regional_processing_uplift_multiplier_us": 1.1,
       "max_input_tokens": 1000000,
       "max_output_tokens": 128000,
       "capabilities": {

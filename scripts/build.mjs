@@ -148,7 +148,10 @@ function normalizeModel(modelId, raw, providers) {
     guardrail_cost_per_unit: costMap(raw.guardrail_cost_per_unit),
     regional_endpoint_uplift_multiplier: numCost(raw.regional_endpoint_uplift_multiplier),
     regional_processing_uplift_multiplier_eu: numCost(raw.regional_processing_uplift_multiplier_eu),
-    regional_processing_uplift_multiplier_us: numCost(raw.regional_processing_uplift_multiplier_us),
+    // Anthropic stores its inference_geo "us" multiplier as provider_specific_entry.us.
+    regional_processing_uplift_multiplier_us: numCost(
+      raw.regional_processing_uplift_multiplier_us ?? raw.provider_specific_entry?.us,
+    ),
     // Anthropic fast mode: LiteLLM stores the premium as provider_specific_entry.fast,
     // a multiplier over every token price (cache multipliers stack on top).
     fast_mode_uplift_multiplier: numCost(raw.provider_specific_entry?.fast),
