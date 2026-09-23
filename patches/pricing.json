@@ -93,43 +93,5 @@
     "input_cost_per_token": 5e-7,
     "output_cost_per_token": 2e-6,
     "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x): 0.0005→5e-7, 0.002→2e-6. Official IBM WatsonX: $0.50/M input, $2.00/M output. Source: https://cloudprice.net/models/watsonx/core42/jais-13b-chat (2026-06-01, sourced from IBM docs)"
-  },
-
-  "_wandb_unit_error_note": "The following wandb/* entries still have LiteLLM upstream data quality bugs: per-million-token prices were stored in the per-token field (off by 1e6). Corrected by dividing the raw value by 1,000,000. Entries fixed by LiteLLM are intentionally left to upstream. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)",
-
-  "wandb/deepseek-ai/DeepSeek-R1-0528": {
-    "input_cost_per_token": 1.35e-7,
-    "output_cost_per_token": 5.4e-7,
-    "_note": "Unit error in LiteLLM upstream (per-M stored as per-token). Corrected: 0.135→1.35e-7, 0.54→5.4e-7. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
-  },
-  "wandb/deepseek-ai/DeepSeek-V3-0324": {
-    "input_cost_per_token": 1.14e-7,
-    "output_cost_per_token": 2.75e-7,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.114→1.14e-7, 0.275→2.75e-7. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
-  },
-  "wandb/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
-    "input_cost_per_token": 1.7e-8,
-    "output_cost_per_token": 6.6e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.017→1.7e-8, 0.066→6.6e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
-  },
-  "wandb/microsoft/Phi-4-mini-instruct": {
-    "input_cost_per_token": 8e-9,
-    "output_cost_per_token": 3.5e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.008→8e-9, 0.035→3.5e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
-  },
-  "wandb/Qwen/Qwen3-235B-A22B-Instruct-2507": {
-    "input_cost_per_token": 1e-8,
-    "output_cost_per_token": 1e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
-  },
-  "wandb/Qwen/Qwen3-235B-A22B-Thinking-2507": {
-    "input_cost_per_token": 1e-8,
-    "output_cost_per_token": 1e-8,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.01→1e-8. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
-  },
-  "wandb/zai-org/GLM-4.5": {
-    "input_cost_per_token": 5.5e-8,
-    "output_cost_per_token": 2e-7,
-    "_note": "Unit error in LiteLLM upstream. Corrected: 0.055→5.5e-8, 0.2→2e-7. Source: https://wandb.ai/site/pricing/tokens/ (2026-09-04)"
   }
 }
