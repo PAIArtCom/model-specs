@@ -108,8 +108,9 @@ a multiplier — the multipliers hold today but are not a contract.
 
 **Time-limited pricing** (introductory rates, promos): record what customers are
 actually billed right now, and leave a `_`-prefixed note in `patches/pricing.json`
-stating the expiry date and the exact values to apply afterwards. See
-`_claude_sonnet_5_intro_pricing_note` for the established format.
+stating the expiry date and the exact values to re-check afterwards. Also add the
+date to the recurring-maintenance table below; do not automatically apply a
+previously announced future price without verifying it at expiry.
 
 ## Before committing
 
