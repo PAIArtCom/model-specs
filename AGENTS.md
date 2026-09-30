@@ -131,6 +131,7 @@ when they lapse — the data just goes quietly wrong. Known dates:
 | Date | Action |
 |---|---|
 | 2026-09-30 | `gemini-omni-flash-preview` retires — replace it in `clients/google-flow.json` when Flow exposes the GA model id |
+| 2026-10-14 | GPT-5.5 retires from Codex with ChatGPT sign-in — replace `gpt-5.5` in `clients/codex.json` with the then-current eligible model |
 | 2026-12-31 | Gemini 3.8 Flash introductory pricing ends — re-check upstream for the January 1, 2027 rates |
 
 When you learn a future date, add a row here in the same commit.

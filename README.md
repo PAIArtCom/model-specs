@@ -85,8 +85,9 @@ mode such as `guardrail` and expose a named per-unit price map; multimodal model
 keep text, image-token, video-token, and resolution-specific per-second rates in
 separate fields. Regional endpoint or processing uplifts and the fast-mode
 premium (`fast_mode_uplift_multiplier`) are retained as multipliers rather than
-folded into base prices. Batch, flex, and priority tiers carry their own cache
-and long-context rates in suffixed fields (`*_batches`, `*_flex`, `*_priority`).
+folded into base prices. Batch, flex, priority, and ultrafast tiers carry their
+own cache and long-context rates in suffixed fields (`*_batches`, `*_flex`,
+`*_priority`, `*_ultrafast`).
 
 ## Contributing
 
