@@ -18,6 +18,8 @@ const stripDocKeys = (obj) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !k.startsWith('_')));
 
 // LiteLLM capability flags -> our normalized capability keys.
+// Provider-specific Bedrock wire-format support and guardrail regex syntax are
+// integration metadata, outside the normalized model capability contract.
 const CAP_MAP = {
   // Core
   supports_function_calling: 'function_calling',
@@ -98,6 +100,11 @@ function normalizeModel(modelId, raw, providers) {
     cache_creation_input_token_cost_ultrafast: numCost(raw.cache_creation_input_token_cost_ultrafast),
     input_cost_per_audio_token: numCost(raw.input_cost_per_audio_token),
     output_cost_per_image_token: numCost(raw.output_cost_per_image_token),
+    input_cost_per_image_token: numCost(raw.input_cost_per_image_token),
+    input_cost_per_image_token_batches: numCost(raw.input_cost_per_image_token_batches),
+    cache_read_input_image_token_cost: numCost(raw.cache_read_input_image_token_cost),
+    cache_read_input_image_token_cost_batches: numCost(raw.cache_read_input_image_token_cost_batches),
+    output_cost_per_image_token_batches: numCost(raw.output_cost_per_image_token_batches),
     output_cost_per_video_token: numCost(raw.output_cost_per_video_token),
     output_cost_per_reasoning_token: numCost(raw.output_cost_per_reasoning_token),
     // Non-token pricing (TTS → per character, STT → per second, rerank → per query)
@@ -125,6 +132,15 @@ function normalizeModel(modelId, raw, providers) {
     input_cost_per_pixel: numCost(raw.input_cost_per_pixel),
     output_cost_per_pixel: numCost(raw.output_cost_per_pixel),
     // Context-tier pricing (long-context surcharges)
+    input_cost_per_token_above_100k_tokens: numCost(raw.input_cost_per_token_above_100k_tokens),
+    output_cost_per_token_above_100k_tokens: numCost(raw.output_cost_per_token_above_100k_tokens),
+    cache_read_input_token_cost_above_100k_tokens: numCost(raw.cache_read_input_token_cost_above_100k_tokens),
+    cache_creation_input_token_cost_above_100k_tokens: numCost(raw.cache_creation_input_token_cost_above_100k_tokens),
+    cache_creation_input_token_cost_above_1hr_above_100k_tokens: numCost(raw.cache_creation_input_token_cost_above_1hr_above_100k_tokens),
+    input_cost_per_token_above_100k_tokens_batches: numCost(raw.input_cost_per_token_above_100k_tokens_batches),
+    output_cost_per_token_above_100k_tokens_batches: numCost(raw.output_cost_per_token_above_100k_tokens_batches),
+    cache_read_input_token_cost_above_100k_tokens_batches: numCost(raw.cache_read_input_token_cost_above_100k_tokens_batches),
+    cache_creation_input_token_cost_above_100k_tokens_batches: numCost(raw.cache_creation_input_token_cost_above_100k_tokens_batches),
     input_cost_per_token_above_200k_tokens: numCost(raw.input_cost_per_token_above_200k_tokens),
     output_cost_per_token_above_200k_tokens: numCost(raw.output_cost_per_token_above_200k_tokens),
     cache_read_input_token_cost_above_200k_tokens: numCost(raw.cache_read_input_token_cost_above_200k_tokens),

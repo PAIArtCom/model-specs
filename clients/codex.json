@@ -1,14 +1,13 @@
 {
   "client": "codex",
-  "description": "User-selectable model ids available through OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is separate from the general OpenAI API. Picker metadata comes from codex-rs/models-manager/models.json in the openai/codex repo; visibility \"list\" models are offered in the picker, while visibility \"hide\" models may remain available when named explicitly. GPT-6 Astra and GPT-6.1 Sol require Codex 0.153.0 or newer; GPT-6.1 Sol is in staged rollout, with Enterprise/Edu admin enablement and no Free/Go access at launch. GPT-6 Sol and GPT-6 Luna require Codex 0.155.0 or newer. GPT-5.3-Codex-Spark retired on 2026-09-14 and is omitted. GPT-5.5 remains selectable until its 2026-10-14 retirement from Codex with ChatGPT sign-in. gpt-5.2 was removed from the bundled catalog as retired. Official OpenAI documentation accepts gpt-5.6 as the generic GPT-5.6 id. Models requiring separate approval and provisioning, including gpt-daybreak-blue-latest and gpt-daybreak-red-latest, are excluded, as is internal-only codex-auto-review.",
+  "description": "User-selectable model ids available through OpenAI's Codex CLI via the ChatGPT OAuth path. The CLI fetches its model catalog from chatgpt.com/backend-api/codex, which is separate from the general OpenAI API. Picker metadata comes from codex-rs/models-manager/models.json in the openai/codex repo; visibility \"list\" models are offered in the picker, while visibility \"hide\" models may remain available when named explicitly. GPT-6 Astra and GPT-6.1 Sol require Codex 0.153.0 or newer; GPT-6.1 Sol is in staged rollout, with Enterprise/Edu admin enablement and no Free/Go access at launch. GPT-6 Sol and GPT-6 Luna require Codex 0.155.0 or newer. GPT-5.3-Codex-Spark retired on 2026-09-14 and is omitted. GPT-5.5 remains selectable until its 2026-10-14 retirement from Codex with ChatGPT sign-in. gpt-5.2 was removed from the bundled catalog as retired. The generic API id gpt-5.6 is excluded because current Codex documentation and the bundled catalog do not establish its availability through ChatGPT sign-in. Bundled slug/visibility pairs are unchanged between commits b1e72963 (2026-09-29) and d63a9b83 (2026-10-06). Models requiring separate approval and provisioning, including gpt-daybreak-blue-latest and gpt-daybreak-red-latest, are excluded, as is internal-only codex-auto-review.",
   "homepage": "https://github.com/openai/codex",
-  "updated": "2026-09-30",
+  "updated": "2026-10-08",
   "models": [
     "gpt-6-astra",
     "gpt-6.1-sol",
     "gpt-6-sol",
     "gpt-6-luna",
-    "gpt-5.6",
     "gpt-5.6-sol",
     "gpt-5.6-terra",
     "gpt-5.6-luna",

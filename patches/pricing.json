@@ -68,9 +68,20 @@
     "_note": "Veo 3.1 Lite video-with-audio pricing: $0.05/s at 720p and $0.08/s at 1080p; 4K is unsupported. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
-  "claude-opus-5-5": {
-    "regional_processing_uplift_multiplier_us": 1.1,
-    "_note": "LiteLLM upstream omits the inference_geo \"us\" multiplier (provider_specific_entry.us) that it carries for every other Claude 4.6+ model. Anthropic applies 1.1x to all token categories for US-only inference on Claude 4.6 and later models. Source: https://platform.claude.com/docs/en/about-claude/pricing#data-residency-pricing (2026-09-30)"
+  "gpt-image-2": {
+    "output_cost_per_image_token_batches": 1.5e-05,
+    "cache_read_input_image_token_cost_batches": 1e-06,
+    "_note": "LiteLLM omits Batch image-output and cached image-input token prices. OpenAI publishes $15/M image output tokens and $1/M cached image input tokens for Batch, distinct from Standard $30/M and $2/M. Source: https://developers.openai.com/api/docs/pricing (2026-10-08)"
+  },
+  "gpt-image-2.5-flare": {
+    "output_cost_per_image_token_batches": 1.5e-05,
+    "cache_read_input_image_token_cost_batches": 1e-06,
+    "_note": "LiteLLM omits Batch image-output and cached image-input token prices. OpenAI publishes $15/M image output tokens and $1/M cached image input tokens for Batch, distinct from Standard $30/M and $2/M. Source: https://developers.openai.com/api/docs/pricing (2026-10-08)"
+  },
+  "gpt-image-2.5-sunburst": {
+    "output_cost_per_image_token_batches": 1.5e-05,
+    "cache_read_input_image_token_cost_batches": 1e-06,
+    "_note": "LiteLLM omits Batch image-output and cached image-input token prices. OpenAI publishes $15/M image output tokens and $1/M cached image input tokens for Batch, distinct from Standard $30/M and $2/M. Source: https://developers.openai.com/api/docs/pricing (2026-10-08)"
   },
 
   "gpt-oss-120b": {

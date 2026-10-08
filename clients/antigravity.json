@@ -1,11 +1,13 @@
 {
   "client": "antigravity",
-  "description": "Model ids accepted by Google's Antigravity CLI (command: agy). Supports multi-provider models. Source: antigravity.google official site/docs bundle; only models with catalog pricing/context data are included.",
+  "description": "Model ids offered by Google Antigravity, as the union across subscription tiers. Source: https://antigravity.google/docs/models (2026-10-08). Claude Sonnet 5.5 and Opus 5.5 thinking variants are available on Google AI Ultra and non-trial Google AI Pro subscriptions, not Free/Plus or Enterprise. Claude Sonnet 4.6, Opus 4.6, and GPT-OSS-120b remain available until their announced removal on 2026-11-02. Only models with catalog pricing/context data are included.",
   "homepage": "https://antigravity.google",
-  "updated": "2026-09-23",
+  "updated": "2026-10-08",
   "models": [
     "claude-opus-4-6",
+    "claude-opus-5-5",
     "claude-sonnet-4-6",
+    "claude-sonnet-5-5",
     "gemini-3.1-pro",
     "gemini-3.6-flash",
     "gemini-3.7-flash",

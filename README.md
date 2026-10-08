@@ -83,7 +83,10 @@ normalized vendor (e.g. all `vertex_ai-anthropic*` → `anthropic`), distinct fr
 LiteLLM's finer-grained `provider`. Specialized services may use a dedicated
 mode such as `guardrail` and expose a named per-unit price map; multimodal models
 keep text, image-token, video-token, and resolution-specific per-second rates in
-separate fields. Regional endpoint or processing uplifts and the fast-mode
+separate fields, including image-input and image-cache token rates and batch image
+output rates. Context pricing thresholds (100K, 200K, and 272K input tokens) keep
+their own input, output, and cache rates; Haiku 5.5 uses the 100K threshold.
+Regional endpoint or processing uplifts and the fast-mode
 premium (`fast_mode_uplift_multiplier`) are retained as multipliers rather than
 folded into base prices. Batch, flex, priority, and ultrafast tiers carry their
 own cache and long-context rates in suffixed fields (`*_batches`, `*_flex`,
