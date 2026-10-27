@@ -18,7 +18,7 @@ repo is meant to be the single source you vendor or fetch.
 |---|---|---|
 | `upstream/litellm/` | A read-only mirror of LiteLLM's `model_prices_and_context_window.json`, refreshed by CI. | **No** — auto-synced |
 | `patches/` | Objective corrections to the upstream data (wrong pricing, provider/platform mapping, capability flags). | Yes — via PR |
-| `clients/` | Which model ids each AI CLI / client accepts (Claude Code, Codex, Antigravity). LiteLLM does not track this. | Yes — via PR |
+| `clients/` | Which model ids each AI CLI / client accepts (Claude Code, Codex, Antigravity, Google Flow). LiteLLM does not track this. | Yes — via PR |
 | `dist/` | The merged, validated artifact consumers read: `catalog.json` + `catalog.sha`. | **No** — generated |
 | `schema/` | JSON Schema for `dist/catalog.json`. | Yes |
 | `scripts/` | `sync` (pull upstream), `build` (merge → dist), `validate` (schema + invariants). | Yes |
