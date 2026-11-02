@@ -1,6 +1,6 @@
 # Provenance of upstream/litellm/prices.json — written by scripts/sync.mjs.
 # Do not edit by hand. Format: key=value, one per line.
-source=https://raw.githubusercontent.com/BerriAI/litellm/c905cd065dfcc64440420e26fa9a085bdc991ba1/model_prices_and_context_window.json
-commit=c905cd065dfcc64440420e26fa9a085bdc991ba1
-fetched_at=2026-10-27T02:23:19.025Z
-content_sha256=1faeeb3b9f7c974445a1377db267551c90b3b2748918f106e6fe2d54b8938d07
+source=https://raw.githubusercontent.com/BerriAI/litellm/ff3983c1f627ad09a5e36e45cc92a0cec91afb72/model_prices_and_context_window.json
+commit=ff3983c1f627ad09a5e36e45cc92a0cec91afb72
+fetched_at=2026-11-02T15:55:03.255Z
+content_sha256=8f8060d8ce7a40c91b995c74d6a27657543d49e3c1c53430dabd556f244392c6
