@@ -130,10 +130,11 @@ when they lapse — the data just goes quietly wrong. Known dates:
 
 | Date | Action |
 |---|---|
-| 2026-09-30 | `gemini-omni-flash-preview` retires — replace it in `clients/google-flow.json` when Flow exposes the GA model id |
-| 2026-10-14 | GPT-5.5 retires from Codex with ChatGPT sign-in — replace `gpt-5.5` in `clients/codex.json` with the then-current eligible model |
-| 2026-11-02 | Antigravity removes `claude-sonnet-4-6`, `claude-opus-4-6`, and `gpt-oss-120b` — re-check its model list and remove those ids |
+| 2026-09-30 | `gemini-omni-flash-preview` retires — replaced by GA `gemini-omni-1.2-flash` in `clients/google-flow.json` |
+| 2026-10-14 | GPT-5.5 retirement from Codex postponed (`retirement_at: null`) — remains in picker with upgrade recommendation to `gpt-6-sol` |
+| 2026-11-18 | Antigravity removes `claude-sonnet-4-6`, `claude-opus-4-6`, and `gpt-oss-120b` (postponed from 2026-11-02) — re-check its model list and remove those ids upon deprecation |
 | 2026-11-30 | Claude API retires `claude-sonnet-4-5-20250929` — remove it from `clients/claude-code.json`; replacement: `claude-sonnet-5-5` |
+| 2026-11-30 | Gemini 4 Carbon and Gemini 4 Argon introductory pricing ends — re-check upstream and patches for December 1, 2026 rates |
 | 2026-12-31 | Gemini 3.8 Flash introductory pricing ends — re-check upstream for the January 1, 2027 rates |
 | 2027-01-06 | OpenAI API shuts down `tts-1`, `tts-1-hd`, `gpt-4o-mini-tts-2025-03-20`, and `gpt-4o-mini-tts-2025-12-15` — re-check lifecycle metadata; replacement: `gpt-realtime-2.1-mini` |
 | 2027-04-01 | OpenAI API shuts down `gpt-5.3-codex`, `gpt-5.1`, and `gpt-5.4-nano` — re-check lifecycle metadata; replacements: `gpt-6-sol` and `gpt-6-luna` |

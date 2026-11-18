@@ -30,6 +30,57 @@
     "_note": "Paid Standard pricing: $0.25/M text/image/video input tokens, $1.50/M text/thinking output tokens, and $30/M image output tokens; Google publishes the 1K image equivalent as $0.0336. The distinct image-token rate comes from LiteLLM's output_cost_per_image_token field. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
+  "gemini-4-carbon": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "chat",
+    "input_cost_per_token": 0.000002,
+    "output_cost_per_token": 0.00001,
+    "cache_read_input_token_cost": 1e-7,
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 1048576,
+    "_note": "Standard tier intro pricing ($2/M in, $10/M out, $0.10/M cache read through 2026-11-30; $4/M in, $20/M out, $0.20/M cache read starting 2026-12-01). Source: https://ai.google.dev/gemini-api/docs/pricing (2026-11-18)"
+  },
+
+  "gemini-4-argon": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "chat",
+    "input_cost_per_token": 0.000002,
+    "output_cost_per_token": 0.00001,
+    "cache_read_input_token_cost": 1e-7,
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 1048576,
+    "_note": "Standard tier intro pricing ($2/M in, $10/M out, $0.10/M cache read through 2026-11-30; $4/M in, $20/M out, $0.20/M cache read starting 2026-12-01). Source: https://ai.google.dev/gemini-api/docs/pricing (2026-11-18)"
+  },
+
+  "gemini-4-hydrogen": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "chat",
+    "input_cost_per_token": 0.0000015,
+    "output_cost_per_token": 0.0000075,
+    "cache_read_input_token_cost": 7.5e-8,
+    "max_input_tokens": 1048576,
+    "max_output_tokens": 1048576,
+    "_note": "Standard tier pricing ($1.50/M in, $7.50/M out, $0.075/M cache read). Source: https://ai.google.dev/gemini-api/docs/pricing (2026-11-18)"
+  },
+
+  "gemini-omni-1.2-flash": {
+    "provider": "gemini",
+    "platform": "gemini",
+    "mode": "video_generation",
+    "input_cost_per_token": 0.0000015,
+    "output_cost_per_token": 0.000009,
+    "output_cost_per_video_token": 0.000012,
+    "output_cost_per_second": 0.07,
+    "output_cost_per_second_1080p": 0.104,
+    "output_cost_per_second_4k": 0.209,
+    "max_input_tokens": 131072,
+    "max_output_tokens": 65536,
+    "_note": "Paid Standard pricing: $1.50/M input tokens, $9/M text output tokens, and $12/M video output tokens (5,792 tokens/s for 720p, yielding $0.07/s; $0.104/s for 1080p; $0.209/s for 4K). GA replacement for gemini-omni-flash-preview. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-11-18)"
+  },
+
   "gemini-omni-flash-preview": {
     "provider": "gemini",
     "platform": "gemini",
@@ -68,22 +119,6 @@
     "_note": "Veo 3.1 Lite video-with-audio pricing: $0.05/s at 720p and $0.08/s at 1080p; 4K is unsupported. Source: https://ai.google.dev/gemini-api/docs/pricing (2026-09-04)"
   },
 
-  "gpt-image-2": {
-    "output_cost_per_image_token_batches": 1.5e-05,
-    "cache_read_input_image_token_cost_batches": 1e-06,
-    "_note": "LiteLLM omits Batch image-output and cached image-input token prices. OpenAI publishes $15/M image output tokens and $1/M cached image input tokens for Batch, distinct from Standard $30/M and $2/M. Source: https://developers.openai.com/api/docs/pricing (2026-10-08)"
-  },
-  "gpt-image-2.5-flare": {
-    "output_cost_per_image_token_batches": 1.5e-05,
-    "cache_read_input_image_token_cost_batches": 1e-06,
-    "_note": "LiteLLM omits Batch image-output and cached image-input token prices. OpenAI publishes $15/M image output tokens and $1/M cached image input tokens for Batch, distinct from Standard $30/M and $2/M. Source: https://developers.openai.com/api/docs/pricing (2026-10-08)"
-  },
-  "gpt-image-2.5-sunburst": {
-    "output_cost_per_image_token_batches": 1.5e-05,
-    "cache_read_input_image_token_cost_batches": 1e-06,
-    "_note": "LiteLLM omits Batch image-output and cached image-input token prices. OpenAI publishes $15/M image output tokens and $1/M cached image input tokens for Batch, distinct from Standard $30/M and $2/M. Source: https://developers.openai.com/api/docs/pricing (2026-10-08)"
-  },
-
   "gpt-oss-120b": {
     "provider": "openai",
     "platform": "openai",
@@ -91,12 +126,6 @@
     "max_input_tokens": 131072,
     "max_output_tokens": 131072,
     "_note": "Open-weight model (Apache 2.0). No official API pricing — not served via OpenAI API, deployed via self-hosting or third parties. Source: https://platform.openai.com/docs/models/gpt-oss-120b (2026-05-31)"
-  },
-
-  "azure_ai/jais-30b-chat": {
-    "input_cost_per_token": 3.2e-6,
-    "output_cost_per_token": 9.71e-6,
-    "_note": "LiteLLM upstream stores per-1K-token prices in the per-token field (off by 1000x). Official Azure Marketplace: $0.0032/1K input, $0.00971/1K output. Source: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/core42.core42-jais30b-v3-chat-offer (2026-06-01)"
   },
 
   "watsonx/bigscience/mt0-xxl-13b": {
